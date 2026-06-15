@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Checkout — Mentone Educational</title><link rel="stylesheet" href="../../css/tokens.css"><link rel="stylesheet" href="../../css/global.css"><link rel="stylesheet" href="../../css/layout.css"><link rel="stylesheet" href="../../css/components.css"></head>
+<body><div id="site-header"></div>
+<main><div class="container" style="padding:var(--space-10) 0;max-width:900px;">
+  <h1 style="font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);margin-bottom:var(--space-8);">Checkout</h1>
+  <div class="checkout-steps">
+    <div class="checkout-step active"><div class="step-number">1</div><div class="step-label">Details</div></div>
+    <div class="step-connector"></div>
+    <div class="checkout-step"><div class="step-number">2</div><div class="step-label">Payment</div></div>
+    <div class="step-connector"></div>
+    <div class="checkout-step"><div class="step-number">✓</div><div class="step-label">Confirmation</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:var(--space-10);align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:var(--space-8);">
+      <div>
+        <h2 style="font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-5);">Contact Information</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Smith"></div>
+          <div class="form-group" style="grid-column:1/-1;"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="jane@hospital.com.au"></div>
+          <div class="form-group" style="grid-column:1/-1;"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="04XX XXX XXX"></div>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-5);">Shipping Address</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
+          <div class="form-group" style="grid-column:1/-1;"><label class="form-label">Address Line 1</label><input type="text" class="form-input" placeholder="123 Main Street"></div>
+          <div class="form-group" style="grid-column:1/-1;"><label class="form-label">Address Line 2 (optional)</label><input type="text" class="form-input" placeholder="Building, Level, Suite…"></div>
+          <div class="form-group"><label class="form-label">City</label><input type="text" class="form-input" placeholder="Melbourne"></div>
+          <div class="form-group"><label class="form-label">State</label><select class="form-select"><option>VIC</option><option>NSW</option><option>QLD</option><option>WA</option><option>SA</option><option>TAS</option><option>ACT</option><option>NT</option></select></div>
+          <div class="form-group"><label class="form-label">Postcode</label><input type="text" class="form-input" placeholder="3000"></div>
+          <div class="form-group"><label class="form-label">Country</label><select class="form-select"><option>Australia</option><option>New Zealand</option></select></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:var(--space-4);">
+        <a href="cart.html" class="btn btn-ghost">← Back to Cart</a>
+        <a href="checkout-payment.html" class="btn btn-accent btn-lg" style="flex:1;text-align:center;">Continue to Payment →</a>
+      </div>
+    </div>
+    <div class="order-summary">
+      <div class="order-summary-title">Order Summary</div>
+      <div style="border-bottom:1px solid var(--color-border);padding-bottom:var(--space-4);margin-bottom:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);">
+        <div style="display:flex;gap:var(--space-3);align-items:center;font-size:var(--font-size-xs);"><span style="font-size:1.5rem;">🧠</span><span style="flex:1;">4-Part Brain Model × 1</span><strong>$189.00</strong></div>
+        <div style="display:flex;gap:var(--space-3);align-items:center;font-size:var(--font-size-xs);"><span style="font-size:1.5rem;">❤️</span><span style="flex:1;">CPR Manikin × 2</span><strong>$490.00</strong></div>
+      </div>
+      <div class="order-summary-row"><span class="label">Subtotal</span><span>$679.00</span></div>
+      <div class="order-summary-row"><span class="label">Shipping</span><span style="color:var(--color-success);">Free</span></div>
+      <div class="order-summary-row total"><span class="label">Total (inc. GST)</span><span>$679.00</span></div>
+    </div>
+  </div>
+</div></main>
+<div id="site-footer"></div><script src="../../js/shared.js"></script><script src="../../js/main.js"></script></body></html>

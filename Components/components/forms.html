@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms — Mentone Component Library</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/component-shell.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="stylesheet" href="forms.css">
+</head>
+<body class="component-page">
+
+<div class="comp-topbar">
+  <div class="comp-topbar-left">
+    <span class="comp-topbar-logo">Mentone</span>
+    <span class="comp-topbar-sep">/</span>
+    <span class="comp-topbar-name">Forms</span>
+  </div>
+  <div class="comp-topbar-right"><a href="../index.html">← Library Index</a></div>
+</div>
+
+<div class="comp-content">
+
+  <div class="comp-section-title">Text Inputs</div>
+  <p class="comp-desc">Default, hover, focus, error, success, and disabled states.</p>
+  <div class="comp-preview" style="max-width:480px; display:flex; flex-direction:column; gap:20px;">
+    <div class="form-group">
+      <label class="form-label">Default</label>
+      <input type="text" class="form-input" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label class="form-label required">Required Field</label>
+      <input type="text" class="form-input" placeholder="Required">
+      <span class="form-hint">This field is required to proceed.</span>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Error State</label>
+      <input type="email" class="form-input error" value="not-an-email">
+      <span class="form-error">Please enter a valid email address.</span>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Success State</label>
+      <input type="text" class="form-input success" value="jane@hospital.com.au">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Disabled</label>
+      <input type="text" class="form-input" value="Cannot be edited" disabled>
+    </div>
+  </div>
+  <div class="comp-label">.form-input / .error / .success / [disabled]</div>
+
+  <div class="comp-section-title">Input with Icon</div>
+  <div class="comp-preview" style="max-width:480px; display:flex; flex-direction:column; gap:20px;">
+    <div class="form-group">
+      <label class="form-label">Search</label>
+      <div class="form-input-wrap">
+        <span class="form-input-icon">🔍</span>
+        <input type="text" class="form-input" placeholder="Search products, brands…">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Price</label>
+      <div class="form-input-wrap">
+        <span class="form-input-icon" style="font-size:13px;font-weight:600;">$</span>
+        <input type="number" class="form-input" placeholder="0.00">
+        <span class="form-input-suffix">AUD</span>
+      </div>
+    </div>
+  </div>
+  <div class="comp-label">.form-input-wrap / .form-input-icon / .form-input-suffix</div>
+
+  <div class="comp-section-title">Select</div>
+  <div class="comp-preview" style="max-width:480px;">
+    <div class="form-group">
+      <label class="form-label">State / Territory</label>
+      <select class="form-select">
+        <option value="">Select…</option>
+        <option>VIC</option><option>NSW</option><option>QLD</option>
+        <option>WA</option><option>SA</option><option>TAS</option>
+      </select>
+    </div>
+  </div>
+  <div class="comp-label">.form-select</div>
+
+  <div class="comp-section-title">Textarea</div>
+  <div class="comp-preview" style="max-width:480px;">
+    <div class="form-group">
+      <label class="form-label">Message</label>
+      <textarea class="form-textarea" placeholder="How can we help you?"></textarea>
+      <span class="form-hint">We'll respond within 1 business day.</span>
+    </div>
+  </div>
+  <div class="comp-label">.form-textarea</div>
+
+  <div class="comp-section-title">Checkboxes & Radios</div>
+  <div class="comp-preview" style="display:flex; flex-direction:column; gap:14px;">
+    <label class="form-check">
+      <input type="checkbox" checked>
+      <div><div class="form-check-label">I agree to the Terms & Conditions</div></div>
+    </label>
+    <label class="form-check">
+      <input type="checkbox">
+      <div><div class="form-check-label">Subscribe to our newsletter</div><div class="form-check-hint">Occasional product updates and promotions.</div></div>
+    </label>
+    <hr style="border:none;border-top:1px dashed #DDE2EA;">
+    <label class="form-check">
+      <input type="radio" name="payment" checked>
+      <div class="form-check-label">Credit / Debit Card</div>
+    </label>
+    <label class="form-check">
+      <input type="radio" name="payment">
+      <div class="form-check-label">Bank Transfer / EFT</div>
+    </label>
+    <label class="form-check">
+      <input type="radio" name="payment">
+      <div class="form-check-label">Purchase Order</div>
+    </label>
+  </div>
+  <div class="comp-label">.form-check / .form-check-label / .form-check-hint</div>
+
+  <div class="comp-section-title">Multi-column Form Row</div>
+  <div class="comp-preview">
+    <div class="form-row" style="margin-bottom:16px;">
+      <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane"></div>
+      <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Smith"></div>
+    </div>
+    <div class="form-row-3">
+      <div class="form-group"><label class="form-label">City</label><input type="text" class="form-input" placeholder="Melbourne"></div>
+      <div class="form-group"><label class="form-label">State</label><select class="form-select"><option>VIC</option></select></div>
+      <div class="form-group"><label class="form-label">Postcode</label><input type="text" class="form-input" placeholder="3000"></div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-accent btn-lg">Save Address</button>
+      <button class="btn btn-ghost">Cancel</button>
+    </div>
+  </div>
+  <div class="comp-label">.form-row / .form-row-3 / .form-actions</div>
+
+</div>
+</body>
+</html>

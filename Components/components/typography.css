@@ -1,0 +1,26 @@
+/* ============================================================
+   COMPONENT: TYPOGRAPHY
+   ============================================================ */
+.text-display  { font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+.text-h1       { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+.text-h2       { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+.text-h3       { font-size: var(--font-size-xl);  font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+.text-h4       { font-size: var(--font-size-lg);  font-weight: var(--font-weight-semibold); }
+.text-h5       { font-size: var(--font-size-base);font-weight: var(--font-weight-semibold); }
+.text-lead     { font-size: var(--font-size-md);  color: var(--color-text-muted); line-height: var(--line-height-relaxed); }
+.text-body     { font-size: var(--font-size-base);color: var(--color-text); line-height: var(--line-height-normal); }
+.text-small    { font-size: var(--font-size-sm);  color: var(--color-text-muted); }
+.text-caption  { font-size: var(--font-size-xs);  color: var(--color-text-light); }
+.text-overline { font-size: var(--font-size-xs);  font-weight: var(--font-weight-bold); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); }
+.text-muted    { color: var(--color-text-muted); }
+.text-primary  { color: var(--color-primary); }
+.text-accent   { color: var(--color-accent); }
+.text-success  { color: var(--color-success); }
+.text-error    { color: var(--color-error); }
+.text-bold     { font-weight: var(--font-weight-bold); }
+.text-medium   { font-weight: var(--font-weight-medium); }
+.text-center   { text-align: center; }
+.link { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+.link:hover { color: var(--color-primary-light); }
+.link-subtle { color: var(--color-text-muted); text-decoration: underline; }
+.link-subtle:hover { color: var(--color-text); }

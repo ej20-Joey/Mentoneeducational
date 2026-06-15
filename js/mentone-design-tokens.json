@@ -1,0 +1,1450 @@
+{
+  "$metadata": {
+    "tokenSetOrder": [
+      "global",
+      "semantic"
+    ],
+    "description": "Mentone Educational design tokens \u2014 merged from site audit + token files. Ready for Tokens Studio import."
+  },
+  "global": {
+    "color": {
+      "teal": {
+        "description": "Primary brand colour \u2014 teal. Use teal.400 (#0077a8) as the base interactive colour \u2014 WCAG AA compliant (4.5:1 on white). teal.300 is the current site value kept for reference.",
+        "50": {
+          "value": "#e5f4fa",
+          "type": "color"
+        },
+        "100": {
+          "value": "#b3ddf0",
+          "type": "color"
+        },
+        "200": {
+          "value": "#66bce1",
+          "type": "color"
+        },
+        "300": {
+          "value": "#2a9db5",
+          "type": "color",
+          "description": "Current site brand teal \u2014 fails AA on white. Kept for reference."
+        },
+        "400": {
+          "value": "#0077a8",
+          "type": "color",
+          "description": "Recommended brand teal \u2014 WCAG AA on white (4.5:1). Use for nav, links, CTAs."
+        },
+        "500": {
+          "value": "#005a80",
+          "type": "color",
+          "description": "Hover / active state"
+        },
+        "600": {
+          "value": "#004466",
+          "type": "color"
+        },
+        "700": {
+          "value": "#003350",
+          "type": "color"
+        },
+        "800": {
+          "value": "#00223a",
+          "type": "color"
+        },
+        "900": {
+          "value": "#001122",
+          "type": "color"
+        }
+      },
+      "red": {
+        "description": "Accent / CTA colour \u2014 confirmed from site: Enquire Now button, sale pricing",
+        "50": {
+          "value": "#fdf0ee",
+          "type": "color"
+        },
+        "100": {
+          "value": "#f9cec7",
+          "type": "color"
+        },
+        "200": {
+          "value": "#f3a093",
+          "type": "color"
+        },
+        "300": {
+          "value": "#ed725f",
+          "type": "color"
+        },
+        "400": {
+          "value": "#e8401c",
+          "type": "color",
+          "description": "Accent red-orange \u2014 Enquire Now CTA, sale badges"
+        },
+        "500": {
+          "value": "#c23215",
+          "type": "color",
+          "description": "Accent hover state"
+        },
+        "600": {
+          "value": "#9c2510",
+          "type": "color"
+        },
+        "700": {
+          "value": "#76190b",
+          "type": "color"
+        },
+        "800": {
+          "value": "#500e06",
+          "type": "color"
+        },
+        "900": {
+          "value": "#2a0401",
+          "type": "color"
+        }
+      },
+      "neutral": {
+        "description": "Greyscale \u2014 used for text, backgrounds, borders, footer",
+        "0": {
+          "value": "#ffffff",
+          "type": "color"
+        },
+        "50": {
+          "value": "#f5f5f5",
+          "type": "color",
+          "description": "Page/section backgrounds"
+        },
+        "100": {
+          "value": "#e8e8e8",
+          "type": "color",
+          "description": "Borders, dividers, input borders"
+        },
+        "200": {
+          "value": "#d0d0d0",
+          "type": "color"
+        },
+        "300": {
+          "value": "#b0b0b0",
+          "type": "color"
+        },
+        "400": {
+          "value": "#999999",
+          "type": "color",
+          "description": "Placeholder text, secondary labels"
+        },
+        "500": {
+          "value": "#777777",
+          "type": "color"
+        },
+        "600": {
+          "value": "#555555",
+          "type": "color"
+        },
+        "700": {
+          "value": "#444444",
+          "type": "color",
+          "description": "Body copy"
+        },
+        "800": {
+          "value": "#2a2a2a",
+          "type": "color",
+          "description": "Footer background"
+        },
+        "900": {
+          "value": "#1a1a1a",
+          "type": "color",
+          "description": "Headings, top utility bar background"
+        },
+        "1000": {
+          "value": "#000000",
+          "type": "color"
+        }
+      },
+      "green": {
+        "description": "Success states",
+        "50": {
+          "value": "#f0faf4",
+          "type": "color"
+        },
+        "300": {
+          "value": "#5fbe8a",
+          "type": "color"
+        },
+        "500": {
+          "value": "#28a745",
+          "type": "color"
+        },
+        "700": {
+          "value": "#1a7a31",
+          "type": "color"
+        }
+      },
+      "amber": {
+        "description": "Warning states",
+        "50": {
+          "value": "#fff8e6",
+          "type": "color"
+        },
+        "300": {
+          "value": "#ffd166",
+          "type": "color"
+        },
+        "500": {
+          "value": "#f59e0b",
+          "type": "color"
+        },
+        "700": {
+          "value": "#b45309",
+          "type": "color"
+        }
+      }
+    },
+    "font": {
+      "family": {
+        "sans": {
+          "value": "'Open Sans', Arial, sans-serif",
+          "type": "fontFamilies",
+          "description": "Primary font \u2014 Open Sans used across site for body and headings"
+        },
+        "mono": {
+          "value": "'Courier New', monospace",
+          "type": "fontFamilies"
+        }
+      },
+      "weight": {
+        "regular": {
+          "value": "400",
+          "type": "fontWeights"
+        },
+        "semibold": {
+          "value": "600",
+          "type": "fontWeights"
+        },
+        "bold": {
+          "value": "700",
+          "type": "fontWeights"
+        }
+      },
+      "size": {
+        "xs": {
+          "value": "11",
+          "type": "fontSizes",
+          "description": "Captions, utility nav"
+        },
+        "sm": {
+          "value": "13",
+          "type": "fontSizes",
+          "description": "Secondary text, meta, filter labels"
+        },
+        "base": {
+          "value": "14",
+          "type": "fontSizes",
+          "description": "Default body text"
+        },
+        "md": {
+          "value": "16",
+          "type": "fontSizes",
+          "description": "Body large"
+        },
+        "lg": {
+          "value": "18",
+          "type": "fontSizes",
+          "description": "H4"
+        },
+        "xl": {
+          "value": "22",
+          "type": "fontSizes",
+          "description": "H3"
+        },
+        "2xl": {
+          "value": "26",
+          "type": "fontSizes",
+          "description": "H2"
+        },
+        "3xl": {
+          "value": "32",
+          "type": "fontSizes",
+          "description": "H1"
+        },
+        "4xl": {
+          "value": "40",
+          "type": "fontSizes",
+          "description": "Display / hero"
+        }
+      },
+      "lineHeight": {
+        "tight": {
+          "value": "1.2",
+          "type": "lineHeights",
+          "description": "Headings"
+        },
+        "base": {
+          "value": "1.5",
+          "type": "lineHeights",
+          "description": "UI elements, nav"
+        },
+        "relaxed": {
+          "value": "1.7",
+          "type": "lineHeights",
+          "description": "Body copy"
+        }
+      },
+      "letterSpacing": {
+        "normal": {
+          "value": "0",
+          "type": "letterSpacing"
+        },
+        "wide": {
+          "value": "0.05em",
+          "type": "letterSpacing",
+          "description": "Button and nav label tracking"
+        },
+        "wider": {
+          "value": "0.1em",
+          "type": "letterSpacing",
+          "description": "Section overlines / eyebrows"
+        }
+      }
+    },
+    "space": {
+      "0": {
+        "value": "0",
+        "type": "spacing"
+      },
+      "1": {
+        "value": "4",
+        "type": "spacing"
+      },
+      "2": {
+        "value": "8",
+        "type": "spacing"
+      },
+      "3": {
+        "value": "12",
+        "type": "spacing"
+      },
+      "4": {
+        "value": "16",
+        "type": "spacing"
+      },
+      "5": {
+        "value": "20",
+        "type": "spacing"
+      },
+      "6": {
+        "value": "24",
+        "type": "spacing"
+      },
+      "8": {
+        "value": "32",
+        "type": "spacing"
+      },
+      "10": {
+        "value": "40",
+        "type": "spacing"
+      },
+      "12": {
+        "value": "48",
+        "type": "spacing"
+      },
+      "16": {
+        "value": "64",
+        "type": "spacing"
+      },
+      "20": {
+        "value": "80",
+        "type": "spacing"
+      },
+      "24": {
+        "value": "96",
+        "type": "spacing"
+      }
+    },
+    "radius": {
+      "none": {
+        "value": "0",
+        "type": "borderRadius"
+      },
+      "sm": {
+        "value": "2",
+        "type": "borderRadius",
+        "description": "Subtle rounding \u2014 inputs, small elements"
+      },
+      "base": {
+        "value": "4",
+        "type": "borderRadius",
+        "description": "Default component rounding \u2014 buttons, cards"
+      },
+      "md": {
+        "value": "6",
+        "type": "borderRadius"
+      },
+      "lg": {
+        "value": "8",
+        "type": "borderRadius",
+        "description": "Modals, dropdowns, large cards"
+      },
+      "full": {
+        "value": "9999",
+        "type": "borderRadius",
+        "description": "Pills \u2014 badges, tags"
+      }
+    },
+    "border": {
+      "width": {
+        "hairline": {
+          "value": "1",
+          "type": "borderWidth"
+        },
+        "thick": {
+          "value": "2",
+          "type": "borderWidth"
+        }
+      }
+    },
+    "shadow": {
+      "none": {
+        "value": "none",
+        "type": "boxShadow"
+      },
+      "sm": {
+        "value": "0 1px 3px rgba(0,0,0,0.08)",
+        "type": "boxShadow",
+        "description": "Subtle card lift"
+      },
+      "base": {
+        "value": "0 2px 6px rgba(0,0,0,0.12)",
+        "type": "boxShadow",
+        "description": "Product card default"
+      },
+      "md": {
+        "value": "0 4px 12px rgba(0,0,0,0.15)",
+        "type": "boxShadow",
+        "description": "Card hover / dropdown"
+      },
+      "lg": {
+        "value": "0 8px 24px rgba(0,0,0,0.18)",
+        "type": "boxShadow",
+        "description": "Modal / overlay"
+      },
+      "nav": {
+        "value": "0 2px 8px rgba(0,0,0,0.10)",
+        "type": "boxShadow",
+        "description": "Sticky nav bottom shadow"
+      }
+    },
+    "size": {
+      "nav-height": {
+        "value": "70",
+        "type": "sizing",
+        "description": "Main nav bar height"
+      },
+      "topbar-height": {
+        "value": "36",
+        "type": "sizing",
+        "description": "Utility bar height (About Us / Contact Us strip)"
+      },
+      "container-max": {
+        "value": "1200",
+        "type": "sizing",
+        "description": "Max content width"
+      },
+      "container-px": {
+        "value": "20",
+        "type": "spacing",
+        "description": "Container horizontal padding"
+      }
+    },
+    "transition": {
+      "fast": {
+        "value": "100ms ease",
+        "type": "other"
+      },
+      "normal": {
+        "value": "200ms ease",
+        "type": "other"
+      },
+      "slow": {
+        "value": "300ms ease",
+        "type": "other"
+      }
+    }
+  },
+  "semantic": {
+    "color": {
+      "brand": {
+        "primary": {
+          "value": "{global.color.teal.400}",
+          "type": "color",
+          "description": "Main brand colour \u2014 nav, links, interactive elements. WCAG AA on white."
+        },
+        "primary-hover": {
+          "value": "{global.color.teal.500}",
+          "type": "color"
+        },
+        "primary-active": {
+          "value": "{global.color.teal.600}",
+          "type": "color"
+        },
+        "primary-subtle": {
+          "value": "{global.color.teal.50}",
+          "type": "color",
+          "description": "Tinted bg for hover states, active filters"
+        },
+        "on-primary": {
+          "value": "{global.color.neutral.0}",
+          "type": "color",
+          "description": "Text/icon colour on teal background"
+        },
+        "accent": {
+          "value": "{global.color.red.400}",
+          "type": "color",
+          "description": "Accent CTA \u2014 Enquire Now button, sale badges"
+        },
+        "accent-hover": {
+          "value": "{global.color.red.500}",
+          "type": "color"
+        },
+        "on-accent": {
+          "value": "{global.color.neutral.0}",
+          "type": "color"
+        }
+      },
+      "text": {
+        "primary": {
+          "value": "{global.color.neutral.900}",
+          "type": "color",
+          "description": "Headings, high-contrast text"
+        },
+        "body": {
+          "value": "{global.color.neutral.700}",
+          "type": "color",
+          "description": "Body copy"
+        },
+        "secondary": {
+          "value": "{global.color.neutral.600}",
+          "type": "color"
+        },
+        "tertiary": {
+          "value": "{global.color.neutral.400}",
+          "type": "color",
+          "description": "Placeholder text, captions"
+        },
+        "disabled": {
+          "value": "{global.color.neutral.300}",
+          "type": "color"
+        },
+        "link": {
+          "value": "{global.color.teal.400}",
+          "type": "color",
+          "description": "Inline links \u2014 WCAG AA on white"
+        },
+        "link-hover": {
+          "value": "{global.color.teal.600}",
+          "type": "color"
+        },
+        "on-dark": {
+          "value": "{global.color.neutral.0}",
+          "type": "color",
+          "description": "Text on dark backgrounds (nav, footer)"
+        },
+        "on-brand": {
+          "value": "{global.color.neutral.0}",
+          "type": "color"
+        }
+      },
+      "bg": {
+        "page": {
+          "value": "{global.color.neutral.0}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{global.color.neutral.50}",
+          "type": "color",
+          "description": "Section alternating backgrounds"
+        },
+        "muted": {
+          "value": "{global.color.neutral.100}",
+          "type": "color",
+          "description": "Disabled states, input backgrounds"
+        },
+        "overlay": {
+          "value": "rgba(0,0,0,0.48)",
+          "type": "color",
+          "description": "Modal overlay scrim"
+        },
+        "nav": {
+          "value": "{global.color.neutral.0}",
+          "type": "color",
+          "description": "Main nav bar \u2014 white"
+        },
+        "topbar": {
+          "value": "{global.color.neutral.900}",
+          "type": "color",
+          "description": "Utility top bar \u2014 dark"
+        },
+        "footer": {
+          "value": "{global.color.neutral.800}",
+          "type": "color"
+        }
+      },
+      "border": {
+        "default": {
+          "value": "{global.color.neutral.100}",
+          "type": "color",
+          "description": "Cards, inputs, dividers"
+        },
+        "strong": {
+          "value": "{global.color.neutral.200}",
+          "type": "color"
+        },
+        "brand": {
+          "value": "{global.color.teal.400}",
+          "type": "color",
+          "description": "Focus rings, active elements"
+        },
+        "focus": {
+          "value": "{global.color.teal.400}",
+          "type": "color"
+        }
+      },
+      "feedback": {
+        "success": {
+          "value": "{global.color.green.500}",
+          "type": "color"
+        },
+        "success-subtle": {
+          "value": "{global.color.green.50}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{global.color.amber.500}",
+          "type": "color"
+        },
+        "warning-subtle": {
+          "value": "{global.color.amber.50}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{global.color.red.500}",
+          "type": "color"
+        },
+        "error-subtle": {
+          "value": "{global.color.red.50}",
+          "type": "color"
+        },
+        "sale": {
+          "value": "{global.color.red.400}",
+          "type": "color",
+          "description": "Sale price / RRP strikethrough"
+        },
+        "sale-subtle": {
+          "value": "{global.color.red.50}",
+          "type": "color"
+        }
+      }
+    },
+    "typography": {
+      "display": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.4xl}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.tight}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "h1": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.3xl}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.tight}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "h2": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.2xl}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.tight}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "h3": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.xl}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.semibold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.tight}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "h4": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.lg}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.semibold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.base}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "body-lg": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.md}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.regular}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.relaxed}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "body": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.base}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.regular}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.relaxed}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "body-sm": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.sm}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.regular}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.base}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "caption": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.xs}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.regular}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.base}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        }
+      },
+      "label": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.sm}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.base}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.wider}",
+          "type": "letterSpacing"
+        }
+      },
+      "nav": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.sm}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.semibold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.base}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.wide}",
+          "type": "letterSpacing"
+        }
+      },
+      "price-lg": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.2xl}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.tight}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        },
+        "description": "Inc GST price on PDP"
+      },
+      "price": {
+        "fontFamily": {
+          "value": "{global.font.family.sans}",
+          "type": "fontFamilies"
+        },
+        "fontSize": {
+          "value": "{global.font.size.md}",
+          "type": "fontSizes"
+        },
+        "fontWeight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "lineHeight": {
+          "value": "{global.font.lineHeight.tight}",
+          "type": "lineHeights"
+        },
+        "letterSpacing": {
+          "value": "{global.font.letterSpacing.normal}",
+          "type": "letterSpacing"
+        },
+        "description": "Inc GST price on PLP card"
+      }
+    },
+    "component": {
+      "button": {
+        "primary": {
+          "description": "Main CTA \u2014 Add to Cart, Shop Now. Teal fill.",
+          "bg": {
+            "value": "{semantic.color.brand.primary}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{semantic.color.brand.primary-hover}",
+            "type": "color"
+          },
+          "bg-active": {
+            "value": "{semantic.color.brand.primary-active}",
+            "type": "color"
+          },
+          "text": {
+            "value": "{semantic.color.brand.on-primary}",
+            "type": "color"
+          },
+          "border": {
+            "value": "{semantic.color.brand.primary}",
+            "type": "color"
+          },
+          "radius": {
+            "value": "{global.radius.base}",
+            "type": "borderRadius"
+          },
+          "padding-x": {
+            "value": "{global.space.5}",
+            "type": "spacing"
+          },
+          "padding-y": {
+            "value": "{global.space.3}",
+            "type": "spacing"
+          },
+          "font-size": {
+            "value": "{global.font.size.sm}",
+            "type": "fontSizes"
+          },
+          "font-weight": {
+            "value": "{global.font.weight.bold}",
+            "type": "fontWeights"
+          },
+          "letter-spacing": {
+            "value": "{global.font.letterSpacing.wider}",
+            "type": "letterSpacing"
+          }
+        },
+        "accent": {
+          "description": "High-priority CTA \u2014 Enquire Now. Red-orange fill. Use sparingly.",
+          "bg": {
+            "value": "{semantic.color.brand.accent}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{semantic.color.brand.accent-hover}",
+            "type": "color"
+          },
+          "text": {
+            "value": "{semantic.color.brand.on-accent}",
+            "type": "color"
+          },
+          "border": {
+            "value": "{semantic.color.brand.accent}",
+            "type": "color"
+          },
+          "radius": {
+            "value": "{global.radius.base}",
+            "type": "borderRadius"
+          },
+          "padding-x": {
+            "value": "{global.space.5}",
+            "type": "spacing"
+          },
+          "padding-y": {
+            "value": "{global.space.3}",
+            "type": "spacing"
+          },
+          "font-size": {
+            "value": "{global.font.size.sm}",
+            "type": "fontSizes"
+          },
+          "font-weight": {
+            "value": "{global.font.weight.bold}",
+            "type": "fontWeights"
+          },
+          "letter-spacing": {
+            "value": "{global.font.letterSpacing.wider}",
+            "type": "letterSpacing"
+          }
+        },
+        "secondary": {
+          "description": "Secondary action \u2014 Contact Us, Download PDF. Teal outline.",
+          "bg": {
+            "value": "{global.color.neutral.0}",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{semantic.color.brand.primary-subtle}",
+            "type": "color"
+          },
+          "text": {
+            "value": "{semantic.color.brand.primary}",
+            "type": "color"
+          },
+          "border": {
+            "value": "{semantic.color.brand.primary}",
+            "type": "color"
+          },
+          "radius": {
+            "value": "{global.radius.base}",
+            "type": "borderRadius"
+          },
+          "padding-x": {
+            "value": "{global.space.5}",
+            "type": "spacing"
+          },
+          "padding-y": {
+            "value": "{global.space.3}",
+            "type": "spacing"
+          },
+          "font-size": {
+            "value": "{global.font.size.sm}",
+            "type": "fontSizes"
+          },
+          "font-weight": {
+            "value": "{global.font.weight.bold}",
+            "type": "fontWeights"
+          },
+          "letter-spacing": {
+            "value": "{global.font.letterSpacing.wider}",
+            "type": "letterSpacing"
+          }
+        },
+        "ghost": {
+          "description": "Tertiary / inline action \u2014 Add to Wishlist, text-style links as buttons",
+          "bg": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "bg-hover": {
+            "value": "{semantic.color.brand.primary-subtle}",
+            "type": "color"
+          },
+          "text": {
+            "value": "{semantic.color.brand.primary}",
+            "type": "color"
+          },
+          "border": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "radius": {
+            "value": "{global.radius.base}",
+            "type": "borderRadius"
+          },
+          "padding-x": {
+            "value": "{global.space.4}",
+            "type": "spacing"
+          },
+          "padding-y": {
+            "value": "{global.space.2}",
+            "type": "spacing"
+          }
+        }
+      },
+      "input": {
+        "description": "Text inputs, search bar, quantity selector",
+        "height": {
+          "value": "40",
+          "type": "sizing"
+        },
+        "bg": {
+          "value": "{semantic.color.bg.page}",
+          "type": "color"
+        },
+        "bg-disabled": {
+          "value": "{semantic.color.bg.muted}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{semantic.color.border.default}",
+          "type": "color"
+        },
+        "border-focus": {
+          "value": "{semantic.color.border.focus}",
+          "type": "color"
+        },
+        "border-error": {
+          "value": "{semantic.color.feedback.error}",
+          "type": "color"
+        },
+        "border-width": {
+          "value": "{global.border.width.hairline}",
+          "type": "borderWidth"
+        },
+        "radius": {
+          "value": "{global.radius.sm}",
+          "type": "borderRadius"
+        },
+        "text": {
+          "value": "{semantic.color.text.body}",
+          "type": "color"
+        },
+        "placeholder": {
+          "value": "{semantic.color.text.tertiary}",
+          "type": "color"
+        },
+        "padding-x": {
+          "value": "{global.space.3}",
+          "type": "spacing"
+        },
+        "padding-y": {
+          "value": "{global.space.2}",
+          "type": "spacing"
+        },
+        "font-size": {
+          "value": "{global.font.size.base}",
+          "type": "fontSizes"
+        }
+      },
+      "card": {
+        "description": "Product cards, content cards",
+        "bg": {
+          "value": "{semantic.color.bg.page}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{semantic.color.border.default}",
+          "type": "color"
+        },
+        "border-width": {
+          "value": "{global.border.width.hairline}",
+          "type": "borderWidth"
+        },
+        "radius": {
+          "value": "{global.radius.base}",
+          "type": "borderRadius"
+        },
+        "shadow": {
+          "value": "{global.shadow.base}",
+          "type": "boxShadow"
+        },
+        "shadow-hover": {
+          "value": "{global.shadow.md}",
+          "type": "boxShadow"
+        },
+        "padding": {
+          "value": "{global.space.4}",
+          "type": "spacing"
+        }
+      },
+      "nav": {
+        "description": "Primary navigation bar \u2014 white bg with teal active states",
+        "height": {
+          "value": "{global.size.nav-height}",
+          "type": "sizing"
+        },
+        "bg": {
+          "value": "{semantic.color.bg.nav}",
+          "type": "color"
+        },
+        "shadow": {
+          "value": "{global.shadow.nav}",
+          "type": "boxShadow"
+        },
+        "link-color": {
+          "value": "{semantic.color.text.body}",
+          "type": "color"
+        },
+        "link-hover": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "link-active": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "item-padding-x": {
+          "value": "{global.space.4}",
+          "type": "spacing"
+        },
+        "item-padding-y": {
+          "value": "{global.space.3}",
+          "type": "spacing"
+        },
+        "dropdown-bg": {
+          "value": "{semantic.color.bg.page}",
+          "type": "color"
+        },
+        "dropdown-border": {
+          "value": "{semantic.color.border.default}",
+          "type": "color"
+        },
+        "dropdown-shadow": {
+          "value": "{global.shadow.md}",
+          "type": "boxShadow"
+        }
+      },
+      "topbar": {
+        "description": "Utility bar at very top \u2014 About Us, Contact Us, Account, Cart",
+        "height": {
+          "value": "{global.size.topbar-height}",
+          "type": "sizing"
+        },
+        "bg": {
+          "value": "{semantic.color.bg.topbar}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{semantic.color.text.on-dark}",
+          "type": "color"
+        },
+        "link-hover": {
+          "value": "{global.color.neutral.300}",
+          "type": "color"
+        }
+      },
+      "badge": {
+        "radius": {
+          "value": "{global.radius.full}",
+          "type": "borderRadius"
+        },
+        "padding-x": {
+          "value": "{global.space.2}",
+          "type": "spacing"
+        },
+        "padding-y": {
+          "value": "{global.space.1}",
+          "type": "spacing"
+        },
+        "font-size": {
+          "value": "{global.font.size.xs}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{global.font.weight.bold}",
+          "type": "fontWeights"
+        },
+        "sale-bg": {
+          "value": "{semantic.color.feedback.sale-subtle}",
+          "type": "color"
+        },
+        "sale-text": {
+          "value": "{semantic.color.feedback.sale}",
+          "type": "color"
+        },
+        "new-bg": {
+          "value": "{semantic.color.brand.primary-subtle}",
+          "type": "color"
+        },
+        "new-text": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        }
+      },
+      "tab": {
+        "description": "Product detail page tabs \u2014 Description, Features, Specifications, Reviews",
+        "bg": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "bg-active": {
+          "value": "{semantic.color.bg.page}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{semantic.color.text.secondary}",
+          "type": "color"
+        },
+        "text-active": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "border-active": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "border-width": {
+          "value": "{global.border.width.thick}",
+          "type": "borderWidth"
+        }
+      },
+      "breadcrumb": {
+        "text": {
+          "value": "{semantic.color.text.secondary}",
+          "type": "color"
+        },
+        "text-current": {
+          "value": "{semantic.color.text.primary}",
+          "type": "color"
+        },
+        "separator": {
+          "value": "{semantic.color.text.tertiary}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{global.font.size.xs}",
+          "type": "fontSizes"
+        }
+      },
+      "pagination": {
+        "bg": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "bg-active": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "text-active": {
+          "value": "{semantic.color.text.on-brand}",
+          "type": "color"
+        },
+        "border": {
+          "value": "{semantic.color.border.default}",
+          "type": "color"
+        },
+        "radius": {
+          "value": "{global.radius.base}",
+          "type": "borderRadius"
+        }
+      },
+      "price": {
+        "description": "Australian GST dual-price display \u2014 ex GST small above, inc GST large below",
+        "inc-gst": {
+          "value": "{semantic.color.text.primary}",
+          "type": "color"
+        },
+        "ex-gst": {
+          "value": "{semantic.color.text.tertiary}",
+          "type": "color"
+        },
+        "sale": {
+          "value": "{semantic.color.feedback.sale}",
+          "type": "color"
+        },
+        "rrp": {
+          "value": "{semantic.color.text.tertiary}",
+          "type": "color"
+        }
+      },
+      "footer": {
+        "bg": {
+          "value": "{semantic.color.bg.footer}",
+          "type": "color"
+        },
+        "padding-y": {
+          "value": "{global.space.10}",
+          "type": "spacing"
+        },
+        "heading-color": {
+          "value": "{global.color.teal.400}",
+          "type": "color",
+          "description": "Footer column headings in teal \u2014 as per site"
+        },
+        "text": {
+          "value": "{global.color.neutral.300}",
+          "type": "color"
+        },
+        "link": {
+          "value": "{global.color.neutral.400}",
+          "type": "color"
+        },
+        "link-hover": {
+          "value": "{global.color.neutral.0}",
+          "type": "color"
+        }
+      },
+      "filter": {
+        "description": "PLP sidebar filter \u2014 replaces current plain teal link list with proper selected state",
+        "label-color": {
+          "value": "{semantic.color.text.primary}",
+          "type": "color"
+        },
+        "item-color": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "item-color-active": {
+          "value": "{semantic.color.brand.primary}",
+          "type": "color"
+        },
+        "item-bg-active": {
+          "value": "{semantic.color.brand.primary-subtle}",
+          "type": "color"
+        },
+        "item-radius": {
+          "value": "{global.radius.base}",
+          "type": "borderRadius"
+        },
+        "item-padding-x": {
+          "value": "{global.space.2}",
+          "type": "spacing"
+        },
+        "item-padding-y": {
+          "value": "{global.space.1}",
+          "type": "spacing"
+        }
+      },
+      "container": {
+        "max-width": {
+          "value": "{global.size.container-max}",
+          "type": "sizing"
+        },
+        "padding-x": {
+          "value": "{global.size.container-px}",
+          "type": "spacing"
+        }
+      }
+    }
+  }
+}

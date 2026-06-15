@@ -1,0 +1,138 @@
+/* ============================================================
+   COMPONENT LIBRARY SHELL STYLES
+   Used only by the component preview pages, not production.
+   ============================================================ */
+
+.component-page {
+  min-height: 100vh;
+  background: #F0F2F5;
+}
+
+/* Top bar */
+.comp-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: #1A1F2E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  font-size: 13px;
+  gap: 16px;
+}
+.comp-topbar-left { display: flex; align-items: center; gap: 12px; }
+.comp-topbar-logo { font-weight: 700; color: #E8A020; font-size: 14px; }
+.comp-topbar-name { color: rgba(255,255,255,0.6); }
+.comp-topbar-sep { color: rgba(255,255,255,0.2); }
+.comp-topbar-right { display: flex; align-items: center; gap: 12px; }
+.comp-topbar a { color: rgba(255,255,255,0.55); font-size: 12px; }
+.comp-topbar a:hover { color: white; }
+
+/* Content wrapper */
+.comp-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* Section heading */
+.comp-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8A94A6;
+  margin-bottom: 16px;
+  margin-top: 48px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #DDE2EA;
+}
+.comp-section-title:first-child { margin-top: 0; }
+
+/* Component description */
+.comp-desc {
+  font-size: 13px;
+  color: #5A6478;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 680px;
+}
+
+/* Preview box */
+.comp-preview {
+  background: white;
+  border: 1px solid #DDE2EA;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 8px;
+}
+.comp-preview.comp-preview-dark {
+  background: #1B3A6B;
+}
+.comp-preview.comp-preview-subtle {
+  background: #F5F7FA;
+}
+.comp-preview.comp-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.comp-preview.comp-preview-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+.comp-preview.comp-preview-flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Code label */
+.comp-label {
+  font-size: 11px;
+  color: #8A94A6;
+  font-family: monospace;
+  background: #F0F2F5;
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  border: 1px solid #DDE2EA;
+}
+
+/* Variant label inside preview */
+.comp-variant-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8A94A6;
+  margin-bottom: 8px;
+}
+
+/* Divider between variants */
+.comp-divider {
+  border: none;
+  border-top: 1px dashed #DDE2EA;
+  margin: 32px 0;
+}
+
+/* Usage note */
+.comp-note {
+  font-size: 12px;
+  color: #8A94A6;
+  background: #F5F7FA;
+  border-left: 3px solid #DDE2EA;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}

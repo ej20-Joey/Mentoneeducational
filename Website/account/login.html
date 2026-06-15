@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login — Mentone Educational</title><link rel="stylesheet" href="../../css/tokens.css"><link rel="stylesheet" href="../../css/global.css"><link rel="stylesheet" href="../../css/layout.css"><link rel="stylesheet" href="../../css/components.css"></head>
+<body><div id="site-header"></div>
+<main><div class="container" style="padding:var(--space-16) 0;max-width:480px;">
+  <div style="text-align:center;margin-bottom:var(--space-8);">
+    <h1 style="font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);margin-bottom:var(--space-2);">Welcome Back</h1>
+    <p style="color:var(--color-text-muted);">Sign in to your Mentone Educational account</p>
+  </div>
+  <div style="display:flex;border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--space-8);">
+    <button id="tab-login" style="flex:1;padding:var(--space-4);font-size:var(--font-size-sm);font-weight:600;background:var(--color-primary);color:white;border:none;cursor:pointer;">Sign In</button>
+    <button id="tab-register" style="flex:1;padding:var(--space-4);font-size:var(--font-size-sm);font-weight:600;background:transparent;color:var(--color-text-muted);border:none;cursor:pointer;" onclick="showRegister()">Create Account</button>
+  </div>
+  <div id="login-form" style="display:flex;flex-direction:column;gap:var(--space-5);">
+    <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="you@email.com"></div>
+    <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" placeholder="••••••••"><div class="form-hint" style="margin-top:var(--space-2);text-align:right;"><a href="#" style="font-size:var(--font-size-xs);color:var(--color-primary);">Forgot password?</a></div></div>
+    <button class="btn btn-primary btn-full btn-lg" onclick="window.location='account-dashboard.html'">Sign In</button>
+  </div>
+  <div id="register-form" style="display:none;flex-direction:column;gap:var(--space-5);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
+      <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane"></div>
+      <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Smith"></div>
+    </div>
+    <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="you@email.com"></div>
+    <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" placeholder="Minimum 8 characters"></div>
+    <button class="btn btn-accent btn-full btn-lg">Create Account</button>
+  </div>
+</div></main>
+<div id="site-footer"></div><script src="../../js/shared.js"></script><script src="../../js/main.js"></script>
+<script>
+function showRegister() {
+  document.getElementById('login-form').style.display = 'none';
+  document.getElementById('register-form').style.display = 'flex';
+  document.getElementById('tab-register').style.background = 'var(--color-primary)';
+  document.getElementById('tab-register').style.color = 'white';
+  document.getElementById('tab-login').style.background = 'transparent';
+  document.getElementById('tab-login').style.color = 'var(--color-text-muted)';
+}
+</script></body></html>

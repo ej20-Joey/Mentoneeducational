@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-Part Brain Model — Mentone Educational</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <style>
+    .pdp-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); padding: var(--space-10) 0; align-items: start; }
+    .pdp-gallery { position: sticky; top: 100px; }
+    .pdp-main-image { background: var(--color-bg-subtle); border-radius: var(--radius-xl); border: 1px solid var(--color-border); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 8rem; margin-bottom: var(--space-4); }
+    .pdp-thumbnails { display: flex; gap: var(--space-3); }
+    .pdp-thumb { width: 72px; height: 72px; background: var(--color-bg-subtle); border: 2px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; transition: border-color var(--transition-fast); }
+    .pdp-thumb.active, .pdp-thumb:hover { border-color: var(--color-primary); }
+    .pdp-info { display: flex; flex-direction: column; gap: var(--space-5); }
+    .pdp-brand-row { display: flex; align-items: center; gap: var(--space-4); }
+    .pdp-brand { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.06em; }
+    .pdp-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); line-height: var(--line-height-tight); }
+    .pdp-rating { display: flex; align-items: center; gap: var(--space-3); }
+    .pdp-price-block { display: flex; align-items: baseline; gap: var(--space-3); }
+    .pdp-price { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-text); }
+    .pdp-price-was { font-size: var(--font-size-lg); color: var(--color-text-light); text-decoration: line-through; }
+    .pdp-price-tax { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+    .pdp-stock { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-sm); color: var(--color-success); font-weight: var(--font-weight-medium); }
+    .pdp-add-row { display: flex; gap: var(--space-4); align-items: center; }
+    .pdp-meta { border-top: 1px solid var(--color-border); padding-top: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+    .pdp-meta-row { display: flex; font-size: var(--font-size-sm); gap: var(--space-3); }
+    .pdp-meta-label { color: var(--color-text-muted); min-width: 100px; }
+    .pdp-meta-value { color: var(--color-text); font-weight: var(--font-weight-medium); }
+    .pdp-tabs { border-bottom: 2px solid var(--color-border); display: flex; gap: 0; margin-bottom: var(--space-6); }
+    .pdp-tab { padding: var(--space-3) var(--space-5); font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text-muted); border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; transition: color var(--transition-fast), border-color var(--transition-fast); }
+    .pdp-tab.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+    .pdp-tab:hover { color: var(--color-text); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    @media (max-width: 1024px) { .pdp-layout { grid-template-columns: 1fr; } .pdp-gallery { position: static; } }
+  </style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <div class="container" style="padding-top:var(--space-6);">
+    <nav class="breadcrumb">
+      <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-item"><a href="plp.html">Anatomy Models</a></span>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-item"><a href="plp.html">Brain & Head</a></span>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-item active">4-Part Brain Model</span>
+    </nav>
+
+    <div class="pdp-layout">
+      <!-- GALLERY -->
+      <div class="pdp-gallery">
+        <div class="pdp-main-image">🧠</div>
+        <div class="pdp-thumbnails">
+          <div class="pdp-thumb active">🧠</div>
+          <div class="pdp-thumb">📐</div>
+          <div class="pdp-thumb">📦</div>
+          <div class="pdp-thumb">📋</div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="pdp-info">
+        <div class="pdp-brand-row">
+          <span class="pdp-brand">3B Scientific</span>
+          <span class="badge badge-new">New Arrival</span>
+        </div>
+        <h1 class="pdp-title">4-Part Brain Model with Arteries — C18</h1>
+
+        <div>
+          <div class="pdp-price-block">
+            <span class="pdp-price">$189.00</span>
+          </div>
+          <div class="pdp-price-tax">Inc. GST. Free shipping on orders over $150.</div>
+        </div>
+        <div class="pdp-stock">✓ In Stock — Ships within 2–5 business days</div>
+
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <div class="pdp-add-row">
+            <div class="qty-selector">
+              <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+              <input type="number" class="qty-input" value="1" min="1">
+              <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+            </div>
+            <button class="btn btn-accent btn-lg" style="flex:1;" onclick="addToCart(1,'4-Part Brain Model')">Add to Cart</button>
+          </div>
+          <button class="btn btn-outline btn-full">♡ Add to Wishlist</button>
+        </div>
+
+        <div class="pdp-meta">
+          <div class="pdp-meta-row"><span class="pdp-meta-label">SKU</span><span class="pdp-meta-value">C18</span></div>
+          <div class="pdp-meta-row"><span class="pdp-meta-label">Brand</span><span class="pdp-meta-value"><a href="brand-landing.html">3B Scientific</a></span></div>
+          <div class="pdp-meta-row"><span class="pdp-meta-label">Category</span><span class="pdp-meta-value"><a href="plp.html">Brain & Head</a></span></div>
+          <div class="pdp-meta-row"><span class="pdp-meta-label">Origin</span><span class="pdp-meta-value">Germany</span></div>
+        </div>
+
+        <!-- TRUST MINI -->
+        <div style="display:flex;gap:var(--space-4);padding:var(--space-4);background:var(--color-bg-subtle);border-radius:var(--radius-md);flex-wrap:wrap;">
+          <span style="font-size:var(--font-size-xs);color:var(--color-text-muted);">🚚 Free shipping $150+</span>
+          <span style="font-size:var(--font-size-xs);color:var(--color-text-muted);">🔄 30-day returns</span>
+          <span style="font-size:var(--font-size-xs);color:var(--color-text-muted);">🔒 Secure checkout</span>
+          <span style="font-size:var(--font-size-xs);color:var(--color-text-muted);">📞 Expert support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div style="padding:var(--space-10) 0;">
+      <div class="pdp-tabs">
+        <div class="pdp-tab active" onclick="showTab('description',this)">Description</div>
+        <div class="pdp-tab" onclick="showTab('specs',this)">Specifications</div>
+        <div class="pdp-tab" onclick="showTab('shipping',this)">Shipping</div>
+        <div class="pdp-tab" onclick="showTab('reviews',this)" id="reviews">Reviews (24)</div>
+      </div>
+      <div id="description" class="tab-content active">
+        <p style="line-height:var(--line-height-relaxed);color:var(--color-text-muted);max-width:800px;">This life-size brain model is divided into 4 parts and shows the main structures of the human brain in detail. The highly detailed model includes the brainstem, cerebellum, and the left and right hemispheres. Arteries of the Willis circle are also included. Ideal for anatomy education, clinical training and patient explanation.</p>
+        <ul style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-2);">
+          <li style="font-size:var(--font-size-sm);color:var(--color-text-muted);">✓ Life-size, 4-part disassembly</li>
+          <li style="font-size:var(--font-size-sm);color:var(--color-text-muted);">✓ Includes arteries of the Willis circle</li>
+          <li style="font-size:var(--font-size-sm);color:var(--color-text-muted);">✓ Comes with numbered key card</li>
+          <li style="font-size:var(--font-size-sm);color:var(--color-text-muted);">✓ Mounted on base stand</li>
+        </ul>
+      </div>
+      <div id="specs" class="tab-content">
+        <table style="width:100%;max-width:600px;border-collapse:collapse;font-size:var(--font-size-sm);">
+          <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:var(--space-3);color:var(--color-text-muted);width:180px;">Dimensions</td><td style="padding:var(--space-3);">14 × 14 × 11 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:var(--space-3);color:var(--color-text-muted);">Weight</td><td style="padding:var(--space-3);">0.5 kg</td></tr>
+          <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:var(--color-text-muted);padding:var(--space-3);">Material</td><td style="padding:var(--space-3);">PVC</td></tr>
+          <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:var(--space-3);color:var(--color-text-muted);">Structures</td><td style="padding:var(--space-3);">29 numbered structures</td></tr>
+          <tr><td style="padding:var(--space-3);color:var(--color-text-muted);">Manufacturer</td><td style="padding:var(--space-3);">3B Scientific, Germany</td></tr>
+        </table>
+      </div>
+      <div id="shipping" class="tab-content">
+        <p style="font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:var(--line-height-relaxed);">Free shipping on orders over $150 (AUS only). Standard shipping 2–5 business days. Express 1–2 business days. International shipping available — contact us for a quote.</p>
+      </div>
+      <div id="reviews-content" class="tab-content">
+        <p style="color:var(--color-text-muted);font-size:var(--font-size-sm);">24 reviews — avg 4.9 stars.</p>
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div style="padding-bottom:var(--space-16);">
+      <div class="section-header"><h2 class="section-title">Related Products</h2></div>
+      <div class="product-grid">
+        <div class="product-card"><div class="product-card-image"><div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;">🧠</div></div><div class="product-card-body"><div class="product-card-brand">3B Scientific</div><a href="pdp.html" class="product-card-name">5-Part Brain Model</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$225.00</span></div><button class="btn btn-primary btn-sm">Add</button></div></div>
+        <div class="product-card"><div class="product-card-image"><div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;">💀</div></div><div class="product-card-body"><div class="product-card-brand">SOMSO</div><a href="pdp.html" class="product-card-name">Human Skull with Removable Cap</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$340.00</span></div><button class="btn btn-primary btn-sm">Add</button></div></div>
+        <div class="product-card"><div class="product-card-image"><div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;">🦴</div></div><div class="product-card-body"><div class="product-card-brand">Erler Zimmer</div><a href="pdp.html" class="product-card-name">Full Skeleton — Economy</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$380.00</span></div><button class="btn btn-primary btn-sm">Add</button></div></div>
+        <div class="product-card"><div class="product-card-image"><div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:3rem;">👁️</div></div><div class="product-card-body"><div class="product-card-brand">3B Scientific</div><a href="pdp.html" class="product-card-name">Eye Model 5x Enlarged</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$95.00</span></div><button class="btn btn-primary btn-sm">Add</button></div></div>
+      </div>
+    </div>
+  </div>
+</main>
+<div id="site-footer"></div>
+<script src="../../js/shared.js"></script>
+<script src="../../js/main.js"></script>
+<script>
+  function showTab(id, el) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.pdp-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts — Mentone Component Library</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/component-shell.css">
+  <link rel="stylesheet" href="alerts.css">
+</head>
+<body class="component-page">
+<div class="comp-topbar">
+  <div class="comp-topbar-left"><span class="comp-topbar-logo">Mentone</span><span class="comp-topbar-sep">/</span><span class="comp-topbar-name">Alerts</span></div>
+  <div class="comp-topbar-right"><a href="../index.html">← Library Index</a></div>
+</div>
+<div class="comp-content">
+
+  <div class="comp-section-title">Alert Variants</div>
+  <div class="comp-preview" style="display:flex;flex-direction:column;gap:12px;">
+    <div class="alert alert-success"><span class="alert-icon">✓</span><div class="alert-body"><div class="alert-title">Order Placed Successfully</div><div class="alert-desc">Your order #ME-20251204-0042 has been confirmed. You'll receive an email confirmation shortly.</div></div><button class="alert-close">×</button></div>
+    <div class="alert alert-info"><span class="alert-icon">ℹ</span><div class="alert-body"><div class="alert-title">Free Shipping Applied</div><div class="alert-desc">Your order qualifies for free standard shipping to Australia.</div></div></div>
+    <div class="alert alert-warning"><span class="alert-icon">⚠</span><div class="alert-body"><div class="alert-title">Low Stock</div><div class="alert-desc">Only 3 left in stock. Order soon to avoid missing out.</div></div></div>
+    <div class="alert alert-error"><span class="alert-icon">✕</span><div class="alert-body"><div class="alert-title">Payment Failed</div><div class="alert-desc">Your card was declined. Please check your details or try a different payment method.</div></div><button class="alert-close">×</button></div>
+  </div>
+  <div class="comp-label">.alert .alert-success / .alert-info / .alert-warning / .alert-error</div>
+
+  <div class="comp-section-title">Toast Notification (Static Preview)</div>
+  <p class="comp-desc">Toasts are absolutely positioned. This preview shows them inline for reference.</p>
+  <div class="comp-preview" style="display:flex;flex-direction:column;gap:12px;">
+    <div class="toast toast-success" style="position:relative;bottom:auto;right:auto;">✓ Brain Model added to cart</div>
+    <div class="toast toast-error"   style="position:relative;bottom:auto;right:auto;">✕ Could not add to cart. Try again.</div>
+    <div class="toast"               style="position:relative;bottom:auto;right:auto;">📋 Order copied to clipboard</div>
+  </div>
+  <div class="comp-label">.toast / .toast-success / .toast-error</div>
+
+</div>
+</body>
+</html>

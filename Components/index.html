@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentone Educational — Component Library</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    body { background: #0F1623; color: white; min-height: 100vh; font-family: var(--font-family); }
+
+    .lib-header {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .lib-logo { display: flex; align-items: center; gap: 14px; }
+    .lib-logo-mark { width: 44px; height: 44px; background: #E8A020; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: white; flex-shrink: 0; }
+    .lib-logo-text strong { display: block; font-size: 16px; font-weight: 700; }
+    .lib-logo-text span { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .lib-badge { background: rgba(232,160,32,0.15); border: 1px solid rgba(232,160,32,0.3); color: #E8A020; padding: 4px 12px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+
+    .lib-hero { padding: 64px 48px 48px; max-width: 700px; }
+    .lib-hero h1 { font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+    .lib-hero h1 span { color: #E8A020; }
+    .lib-hero p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    .lib-grid { padding: 0 48px 80px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+    .lib-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    }
+    .lib-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(232,160,32,0.4);
+      transform: translateY(-2px);
+    }
+    .lib-card-icon { font-size: 28px; }
+    .lib-card-name { font-size: 15px; font-weight: 700; color: white; }
+    .lib-card-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; flex: 1; }
+    .lib-card-count { font-size: 11px; color: rgba(255,255,255,0.3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .lib-card-arrow { font-size: 13px; color: #E8A020; font-weight: 600; margin-top: 4px; }
+
+    .lib-section-label {
+      padding: 0 48px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 16px;
+      margin-top: 40px;
+    }
+
+    .lib-footer { padding: 24px 48px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 12px; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 768px) {
+      .lib-header { padding: 24px; }
+      .lib-hero { padding: 40px 24px 32px; }
+      .lib-hero h1 { font-size: 28px; }
+      .lib-grid { padding: 0 24px 60px; grid-template-columns: 1fr 1fr; }
+      .lib-section-label { padding: 0 24px; }
+      .lib-footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lib-header">
+  <div class="lib-logo">
+    <div class="lib-logo-mark">M</div>
+    <div class="lib-logo-text">
+      <strong>Mentone Educational</strong>
+      <span>Component Library</span>
+    </div>
+  </div>
+  <span class="lib-badge">v1.0</span>
+</div>
+
+<div class="lib-hero">
+  <h1>Design <span>tokens</span> meet<br>production components.</h1>
+  <p>Each component is self-contained with its own HTML and CSS. All values trace back to <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;font-size:14px;">css/tokens.css</code> — inject Figma values there and the whole library updates.</p>
+</div>
+
+<div class="lib-section-label">Foundations</div>
+<div class="lib-grid">
+  <a href="components/colours.html" class="lib-card">
+    <div class="lib-card-icon">🎨</div>
+    <div class="lib-card-name">Colours</div>
+    <div class="lib-card-desc">Full colour palette with brand, surface, text, and semantic tokens.</div>
+    <div class="lib-card-count">4 groups</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/typography.html" class="lib-card">
+    <div class="lib-card-icon">Aa</div>
+    <div class="lib-card-name">Typography</div>
+    <div class="lib-card-desc">Type scale from Display to Caption. Colour and weight utilities.</div>
+    <div class="lib-card-count">10 levels</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+</div>
+
+<div class="lib-section-label">Core Components</div>
+<div class="lib-grid">
+  <a href="components/buttons.html" class="lib-card">
+    <div class="lib-card-icon">🔲</div>
+    <div class="lib-card-name">Buttons</div>
+    <div class="lib-card-desc">Primary, accent, outline, ghost, danger. All sizes, states, and icon variants.</div>
+    <div class="lib-card-count">5 variants · 5 sizes · 4 states</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/forms.html" class="lib-card">
+    <div class="lib-card-icon">📝</div>
+    <div class="lib-card-name">Forms</div>
+    <div class="lib-card-desc">Inputs, selects, textareas, checkboxes, radios. With icon variants and multi-col layouts.</div>
+    <div class="lib-card-count">6 input types · error / success / disabled</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/cards.html" class="lib-card">
+    <div class="lib-card-icon">🃏</div>
+    <div class="lib-card-name">Cards</div>
+    <div class="lib-card-desc">Product, category, brand, content, and stat cards. The core layout units of the site.</div>
+    <div class="lib-card-count">5 card types</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/badges.html" class="lib-card">
+    <div class="lib-card-icon">🏷</div>
+    <div class="lib-card-name">Badges & Tags</div>
+    <div class="lib-card-desc">Product labels, order status chips, and dismissible filter tags.</div>
+    <div class="lib-card-count">8 badge types · 3 tag variants</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/alerts.html" class="lib-card">
+    <div class="lib-card-icon">🔔</div>
+    <div class="lib-card-name">Alerts & Toasts</div>
+    <div class="lib-card-desc">Inline alert banners and floating toast notifications for all semantic states.</div>
+    <div class="lib-card-count">4 variants · toast</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/navigation.html" class="lib-card">
+    <div class="lib-card-icon">🧭</div>
+    <div class="lib-card-name">Navigation</div>
+    <div class="lib-card-desc">Breadcrumbs, pagination, underline tabs, pill tabs, and checkout step indicator.</div>
+    <div class="lib-card-count">5 nav patterns</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+  <a href="components/modal.html" class="lib-card">
+    <div class="lib-card-icon">🪟</div>
+    <div class="lib-card-name">Modal</div>
+    <div class="lib-card-desc">Standard and confirm modals. Includes the healthcare professional interstitial pattern.</div>
+    <div class="lib-card-count">2 variants · sm / lg sizes</div>
+    <div class="lib-card-arrow">Open →</div>
+  </a>
+</div>
+
+<div class="lib-section-label">How to Use</div>
+<div style="padding: 0 48px 80px; max-width: 680px;">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:16px;">
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);">Step 1</div>
+      <div style="font-size:14px;font-weight:600;">Update <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">css/tokens.css</code></div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.5);">All design token values live here. Inject Figma values via Claude Code — everything in the library updates automatically.</div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);">Step 2</div>
+      <div style="font-size:14px;font-weight:600;">Link the CSS files you need</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.5);">Each component has its own CSS file. Only include what a page actually uses.</div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);">Step 3</div>
+      <div style="font-size:14px;font-weight:600;">Copy HTML patterns from component pages</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.5);">Each component page shows all variants with their class names. Copy the HTML directly into your page templates.</div>
+    </div>
+  </div>
+</div>
+
+<div class="lib-footer">Mentone Educational Component Library — for use with the mentone-educational site project.</div>
+
+</body>
+</html>

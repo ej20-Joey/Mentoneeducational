@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Account — Mentone Educational</title><link rel="stylesheet" href="../../css/tokens.css"><link rel="stylesheet" href="../../css/global.css"><link rel="stylesheet" href="../../css/layout.css"><link rel="stylesheet" href="../../css/components.css"></head>
+<body><div id="site-header"></div>
+<main><div class="container" style="padding:var(--space-10) 0;">
+  <h1 style="font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);margin-bottom:var(--space-8);">My Account</h1>
+  <div class="account-layout">
+    <aside class="account-sidebar">
+      <div style="background:var(--color-primary);color:white;padding:var(--space-5);border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;gap:var(--space-3);">
+        <div style="width:40px;height:40px;background:rgba(255,255,255,0.2);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;font-weight:bold;">JS</div>
+        <div><div style="font-weight:600;font-size:var(--font-size-sm);">Jane Smith</div><div style="font-size:var(--font-size-xs);opacity:0.75;">jane@hospital.com.au</div></div>
+      </div>
+      <nav class="account-nav" style="border-radius:0 0 var(--radius-lg) var(--radius-lg);">
+        <a href="account-dashboard.html" class="account-nav-link active"><span class="account-nav-icon">🏠</span> Dashboard</a>
+        <a href="account-orders.html" class="account-nav-link"><span class="account-nav-icon">📦</span> Order History</a>
+        <a href="#" class="account-nav-link"><span class="account-nav-icon">📍</span> Addresses</a>
+        <a href="#" class="account-nav-link"><span class="account-nav-icon">👤</span> Profile</a>
+        <a href="login.html" class="account-nav-link"><span class="account-nav-icon">🚪</span> Sign Out</a>
+      </nav>
+    </aside>
+    <div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-bottom:var(--space-10);">
+        <div style="background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:center;"><div style="font-size:2rem;font-weight:bold;color:var(--color-primary);">7</div><div style="font-size:var(--font-size-sm);color:var(--color-text-muted);">Total Orders</div></div>
+        <div style="background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:center;"><div style="font-size:2rem;font-weight:bold;color:var(--color-primary);">2</div><div style="font-size:var(--font-size-sm);color:var(--color-text-muted);">In Transit</div></div>
+        <div style="background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);text-align:center;"><div style="font-size:2rem;font-weight:bold;color:var(--color-primary);">$3,241</div><div style="font-size:var(--font-size-sm);color:var(--color-text-muted);">Total Spent</div></div>
+      </div>
+      <h2 style="font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-5);">Recent Orders</h2>
+      <div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;">
+        <div style="display:grid;grid-template-columns:1fr 1fr 120px 120px;gap:var(--space-4);padding:var(--space-4) var(--space-5);background:var(--color-bg-subtle);font-size:var(--font-size-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-muted);">
+          <span>Order</span><span>Date</span><span>Total</span><span>Status</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 120px 120px;gap:var(--space-4);padding:var(--space-4) var(--space-5);border-top:1px solid var(--color-border);font-size:var(--font-size-sm);align-items:center;">
+          <a href="account-order-detail.html" style="color:var(--color-primary);font-weight:600;">#ME-20251204-0042</a><span style="color:var(--color-text-muted);">4 Dec 2025</span><strong>$679.00</strong><span style="background:#EBF8F0;color:var(--color-success);padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600;">Processing</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 120px 120px;gap:var(--space-4);padding:var(--space-4) var(--space-5);border-top:1px solid var(--color-border);font-size:var(--font-size-sm);align-items:center;">
+          <a href="account-order-detail.html" style="color:var(--color-primary);font-weight:600;">#ME-20251120-0038</a><span style="color:var(--color-text-muted);">20 Nov 2025</span><strong>$1,240.00</strong><span style="background:#EBF2FB;color:var(--color-info);padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600;">Shipped</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 120px 120px;gap:var(--space-4);padding:var(--space-4) var(--space-5);border-top:1px solid var(--color-border);font-size:var(--font-size-sm);align-items:center;">
+          <a href="account-order-detail.html" style="color:var(--color-primary);font-weight:600;">#ME-20251005-0031</a><span style="color:var(--color-text-muted);">5 Oct 2025</span><strong>$340.00</strong><span style="background:var(--color-bg-muted);color:var(--color-text-muted);padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600;">Delivered</span>
+        </div>
+      </div>
+      <div style="text-align:right;margin-top:var(--space-4);"><a href="account-orders.html" style="font-size:var(--font-size-sm);color:var(--color-primary);">View all orders →</a></div>
+    </div>
+  </div>
+</div></main>
+<div id="site-footer"></div><script src="../../js/shared.js"></script><script src="../../js/main.js"></script></body></html>

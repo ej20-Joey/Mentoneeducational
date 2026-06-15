@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons — Mentone Component Library</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/component-shell.css">
+  <link rel="stylesheet" href="buttons.css">
+</head>
+<body class="component-page">
+
+<div class="comp-topbar">
+  <div class="comp-topbar-left">
+    <span class="comp-topbar-logo">Mentone</span>
+    <span class="comp-topbar-sep">/</span>
+    <span class="comp-topbar-name">Buttons</span>
+  </div>
+  <div class="comp-topbar-right">
+    <a href="../index.html">← Library Index</a>
+  </div>
+</div>
+
+<div class="comp-content">
+
+  <div class="comp-section-title">Variants</div>
+  <p class="comp-desc">Core button variants. Use <code>btn-primary</code> for the main action per screen. <code>btn-accent</code> for high-emphasis commerce CTAs like "Add to Cart". Avoid more than one primary per view.</p>
+  <div class="comp-preview comp-preview-flex-center">
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-accent">Add to Cart</button>
+    <button class="btn btn-outline">Outline</button>
+    <button class="btn btn-ghost">Ghost</button>
+    <button class="btn btn-danger">Danger</button>
+  </div>
+  <div class="comp-label">.btn .btn-primary / .btn-accent / .btn-outline / .btn-ghost / .btn-danger</div>
+
+  <div class="comp-section-title">Sizes</div>
+  <p class="comp-desc">Four sizes. Default (no size modifier) is the standard for most UI. <code>btn-lg</code> for hero CTAs and checkout flows.</p>
+  <div class="comp-preview comp-preview-flex-center">
+    <button class="btn btn-primary btn-xs">Extra Small</button>
+    <button class="btn btn-primary btn-sm">Small</button>
+    <button class="btn btn-primary">Default</button>
+    <button class="btn btn-primary btn-lg">Large</button>
+    <button class="btn btn-primary btn-xl">Extra Large</button>
+  </div>
+  <div class="comp-label">.btn-xs / .btn-sm / (default) / .btn-lg / .btn-xl</div>
+
+  <div class="comp-section-title">States</div>
+  <p class="comp-desc">Disabled and loading states. Always apply <code>disabled</code> attribute for accessibility, not just the CSS class.</p>
+  <div class="comp-preview comp-preview-flex-center">
+    <button class="btn btn-primary" disabled>Disabled</button>
+    <button class="btn btn-accent" disabled>Disabled Accent</button>
+    <button class="btn btn-outline" disabled>Disabled Outline</button>
+    <button class="btn btn-primary btn-loading">Loading</button>
+  </div>
+  <div class="comp-label">[disabled] / .btn-loading</div>
+
+  <div class="comp-section-title">Full Width</div>
+  <p class="comp-desc">Use <code>btn-full</code> for mobile contexts, checkout flows, and form submissions.</p>
+  <div class="comp-preview" style="max-width: 400px;">
+    <button class="btn btn-accent btn-lg btn-full">Proceed to Checkout</button>
+    <div style="height: 12px;"></div>
+    <button class="btn btn-outline btn-full">Continue Shopping</button>
+  </div>
+  <div class="comp-label">.btn-full</div>
+
+  <div class="comp-section-title">On Dark Background</div>
+  <div class="comp-preview comp-preview-dark comp-preview-flex-center">
+    <button class="btn btn-accent btn-lg">Shop Simulation</button>
+    <button class="btn btn-outline-white btn-lg">Browse Anatomy</button>
+  </div>
+  <div class="comp-label">.btn-outline-white — use on dark/primary backgrounds</div>
+
+  <div class="comp-section-title">Icon Buttons</div>
+  <p class="comp-desc">Square icon-only buttons for toolbar actions. Pair with a <code>title</code> attribute for accessibility.</p>
+  <div class="comp-preview comp-preview-flex-center">
+    <button class="btn btn-outline btn-icon" title="Search">🔍</button>
+    <button class="btn btn-ghost btn-icon" title="Wishlist">♡</button>
+    <button class="btn btn-primary btn-icon-round" title="Add to Cart">🛒</button>
+    <button class="btn btn-ghost btn-icon" title="Delete">🗑</button>
+  </div>
+  <div class="comp-label">.btn-icon / .btn-icon-round</div>
+
+</div>
+</body>
+</html>

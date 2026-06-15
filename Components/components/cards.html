@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards — Mentone Component Library</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/component-shell.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="stylesheet" href="badges.css">
+  <link rel="stylesheet" href="cards.css">
+  <style>
+    .stars { display:flex; gap:2px; color:var(--color-accent); font-size:12px; }
+  </style>
+</head>
+<body class="component-page">
+<div class="comp-topbar">
+  <div class="comp-topbar-left"><span class="comp-topbar-logo">Mentone</span><span class="comp-topbar-sep">/</span><span class="comp-topbar-name">Cards</span></div>
+  <div class="comp-topbar-right"><a href="../index.html">← Library Index</a></div>
+</div>
+<div class="comp-content">
+
+  <div class="comp-section-title">Product Card</div>
+  <p class="comp-desc">Used on PLPs, search results, homepage featured products, and brand pages. The default grid is 4-col desktop → 3-col → 2-col → 1-col.</p>
+  <div class="comp-preview comp-preview-grid">
+    <div class="product-card">
+      <div class="product-card-image">
+        <div style="font-size:3.5rem;">🧠</div>
+        <div class="product-card-badges"><span class="badge badge-new">New</span></div>
+        <button class="product-card-wishlist">♡</button>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-brand">3B Scientific</div>
+        <div class="product-card-name"><a href="#">4-Part Brain Model with Arteries</a></div>
+        <div class="product-card-sku">SKU: C18</div>
+        <div class="product-card-rating"><div class="stars">★★★★★</div><span style="font-size:12px;color:var(--color-text-muted);">(24)</span></div>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-card-price"><span class="price-current">$189.00</span></div>
+        <button class="btn btn-primary btn-sm">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-card-image">
+        <div style="font-size:3.5rem;">🦴</div>
+        <div class="product-card-badges"><span class="badge badge-sale">Sale</span></div>
+        <button class="product-card-wishlist">♡</button>
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-brand">Erler Zimmer</div>
+        <div class="product-card-name"><a href="#">Full Skeleton 170cm Natural</a></div>
+        <div class="product-card-sku">SKU: EZ-SK01</div>
+        <div class="product-card-rating"><div class="stars">★★★★☆</div><span style="font-size:12px;color:var(--color-text-muted);">(18)</span></div>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-card-price"><span class="price-current price-sale">$520.00</span><span class="price-was">$650.00</span></div>
+        <button class="btn btn-primary btn-sm">Add</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-card-image"><div style="font-size:3.5rem;">❤️</div></div>
+      <div class="product-card-body">
+        <div class="product-card-brand">Prestan</div>
+        <div class="product-card-name"><a href="#">CPR Manikin Adult with Rate Monitor</a></div>
+        <div class="product-card-sku">SKU: PP-MANIKIN-1</div>
+        <div class="product-card-rating"><div class="stars">★★★★★</div><span style="font-size:12px;color:var(--color-text-muted);">(41)</span></div>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-card-price"><span class="price-current">$245.00</span></div>
+        <button class="btn btn-primary btn-sm">Add</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-card-image"><div style="font-size:3.5rem;">🫀</div></div>
+      <div class="product-card-body">
+        <div class="product-card-brand">Gaumard</div>
+        <div class="product-card-name"><a href="#">HAL Adult Patient Simulator S3201</a></div>
+        <div class="product-card-sku">SKU: S3201</div>
+        <div class="product-card-rating"><div class="stars">★★★★★</div><span style="font-size:12px;color:var(--color-text-muted);">(9)</span></div>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-card-price"><span class="price-current">$14,200.00</span></div>
+        <button class="btn btn-outline btn-sm">Enquire</button>
+      </div>
+    </div>
+  </div>
+  <div class="comp-label">.product-card</div>
+
+  <div class="comp-section-title">Category Card</div>
+  <div class="comp-preview comp-preview-grid">
+    <a href="#" class="category-card"><div class="category-card-image">🫀</div><div class="category-card-body"><div class="category-card-name">Simulation</div><div class="category-card-count">12 sub-categories</div></div></a>
+    <a href="#" class="category-card"><div class="category-card-image">🦴</div><div class="category-card-body"><div class="category-card-name">Anatomy Models</div><div class="category-card-count">24 types</div></div></a>
+    <a href="#" class="category-card"><div class="category-card-image">📚</div><div class="category-card-body"><div class="category-card-name">Health Education</div><div class="category-card-count">8 categories</div></div></a>
+    <a href="#" class="category-card"><div class="category-card-image">💊</div><div class="category-card-body"><div class="category-card-name">Demo Dose</div><div class="category-card-count">17 types</div></div></a>
+  </div>
+  <div class="comp-label">.category-card</div>
+
+  <div class="comp-section-title">Brand Card</div>
+  <div class="comp-preview comp-preview-grid">
+    <a href="#" class="brand-card"><div class="brand-card-logo">3B</div><div class="brand-card-name">3B Scientific</div><div class="brand-card-count">64 products</div></a>
+    <a href="#" class="brand-card"><div class="brand-card-logo">GAU</div><div class="brand-card-name">Gaumard</div><div class="brand-card-count">18 products</div></a>
+    <a href="#" class="brand-card"><div class="brand-card-logo">iSIM</div><div class="brand-card-name">iSimulate</div><div class="brand-card-count">9 products</div></a>
+    <a href="#" class="brand-card"><div class="brand-card-logo">SYN</div><div class="brand-card-name">SynDaver</div><div class="brand-card-count">7 products</div></a>
+  </div>
+  <div class="comp-label">.brand-card</div>
+
+  <div class="comp-section-title">Content Card</div>
+  <div class="comp-preview comp-preview-grid">
+    <div class="content-card"><div class="content-card-eyebrow">Simulation</div><div class="content-card-title">ALS Patient Simulators</div><div class="content-card-body">High-fidelity adult simulators for advanced life support training.</div><a href="#" class="btn btn-outline btn-sm" style="margin-top:8px;width:fit-content;">Browse →</a></div>
+    <div class="content-card"><div class="content-card-eyebrow">New Arrival</div><div class="content-card-title">iSimulate ALSi Monitor</div><div class="content-card-body">Realistic ECG simulation on iPad. No proprietary hardware needed.</div><a href="#" class="btn btn-outline btn-sm" style="margin-top:8px;width:fit-content;">View →</a></div>
+  </div>
+  <div class="comp-label">.content-card</div>
+
+  <div class="comp-section-title">Stat Card</div>
+  <div class="comp-preview comp-preview-grid">
+    <div class="stat-card"><div class="stat-card-number">45+</div><div class="stat-card-label">Years in Business</div></div>
+    <div class="stat-card"><div class="stat-card-number">21</div><div class="stat-card-label">Global Brands</div></div>
+    <div class="stat-card"><div class="stat-card-number">10+</div><div class="stat-card-label">Countries Sourced</div></div>
+    <div class="stat-card"><div class="stat-card-number">1000s</div><div class="stat-card-label">Products in Stock</div></div>
+  </div>
+  <div class="comp-label">.stat-card</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal — Mentone Component Library</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/component-shell.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="stylesheet" href="forms.css">
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body class="component-page">
+<div class="comp-topbar">
+  <div class="comp-topbar-left"><span class="comp-topbar-logo">Mentone</span><span class="comp-topbar-sep">/</span><span class="comp-topbar-name">Modal</span></div>
+  <div class="comp-topbar-right"><a href="../index.html">← Library Index</a></div>
+</div>
+<div class="comp-content">
+  <div class="comp-section-title">Standard Modal</div>
+  <p class="comp-desc">Shown inline here for preview. In production, wrap in .modal-overlay and toggle visibility.</p>
+  <div class="comp-preview" style="background:var(--color-bg-muted);">
+    <div class="modal" style="position:relative;animation:none;">
+      <div class="modal-header"><div class="modal-title">Are you a Healthcare Professional?</div><button class="modal-close">×</button></div>
+      <div class="modal-body">
+        <p style="color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.6;margin-bottom:20px;">Some products are intended for qualified healthcare professionals. Where would you like to shop?</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <button class="btn btn-primary btn-full">🎓 Educator / Student — Stay on Mentone Educational</button>
+          <button class="btn btn-outline btn-full">🩺 Healthcare Professional — Go to device.com.au</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comp-label">.modal / .modal-header / .modal-title / .modal-close / .modal-body / .modal-footer</div>
+
+  <div class="comp-section-title">Confirm / Destructive Modal</div>
+  <div class="comp-preview" style="background:var(--color-bg-muted);">
+    <div class="modal" style="position:relative;animation:none;max-width:400px;">
+      <div class="modal-header"><div class="modal-title">Remove from Cart?</div><button class="modal-close">×</button></div>
+      <div class="modal-body"><p style="color:var(--color-text-muted);font-size:var(--font-size-sm);">Are you sure you want to remove "4-Part Brain Model" from your cart?</p></div>
+      <div class="modal-footer"><button class="btn btn-ghost">Cancel</button><button class="btn btn-danger">Remove</button></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

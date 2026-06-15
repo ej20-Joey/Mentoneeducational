@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation — Mentone Component Library</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/component-shell.css">
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body class="component-page">
+<div class="comp-topbar">
+  <div class="comp-topbar-left"><span class="comp-topbar-logo">Mentone</span><span class="comp-topbar-sep">/</span><span class="comp-topbar-name">Navigation</span></div>
+  <div class="comp-topbar-right"><a href="../index.html">← Library Index</a></div>
+</div>
+<div class="comp-content">
+
+  <div class="comp-section-title">Breadcrumb</div>
+  <div class="comp-preview"><nav class="breadcrumb"><span class="breadcrumb-item"><a href="#">Home</a></span><span class="breadcrumb-sep">›</span><span class="breadcrumb-item"><a href="#">Simulation</a></span><span class="breadcrumb-sep">›</span><span class="breadcrumb-item"><a href="#">Airway Management</a></span><span class="breadcrumb-sep">›</span><span class="breadcrumb-item active">Airway Management Trainer</span></nav></div>
+  <div class="comp-label">.breadcrumb / .breadcrumb-item / .breadcrumb-sep / .active</div>
+
+  <div class="comp-section-title">Pagination</div>
+  <div class="comp-preview">
+    <div class="pagination">
+      <button class="pagination-btn" disabled>‹</button>
+      <button class="pagination-btn active">1</button>
+      <button class="pagination-btn">2</button>
+      <button class="pagination-btn">3</button>
+      <span class="pagination-ellipsis">…</span>
+      <button class="pagination-btn">12</button>
+      <button class="pagination-btn">›</button>
+    </div>
+  </div>
+  <div class="comp-label">.pagination / .pagination-btn / .active</div>
+
+  <div class="comp-section-title">Underline Tabs</div>
+  <p class="comp-desc">Used on the PDP for Description / Specs / Shipping / Reviews.</p>
+  <div class="comp-preview">
+    <div class="tabs">
+      <button class="tab active">Description</button>
+      <button class="tab">Specifications</button>
+      <button class="tab">Shipping</button>
+      <button class="tab">Reviews (24)</button>
+    </div>
+  </div>
+  <div class="comp-label">.tabs / .tab / .active</div>
+
+  <div class="comp-section-title">Pill Tabs</div>
+  <p class="comp-desc">Used for category filter toggles, audience selectors, and search result type filters.</p>
+  <div class="comp-preview">
+    <div class="tabs-pill">
+      <button class="tab-pill active">All Brands</button>
+      <button class="tab-pill">Anatomy</button>
+      <button class="tab-pill">Simulation</button>
+    </div>
+  </div>
+  <div class="comp-label">.tabs-pill / .tab-pill / .active</div>
+
+  <div class="comp-section-title">Checkout Steps</div>
+  <div class="comp-preview">
+    <div class="checkout-steps">
+      <div class="checkout-step complete"><div class="step-number">✓</div><div class="step-label">Details</div></div>
+      <div class="step-connector complete"></div>
+      <div class="checkout-step active"><div class="step-number">2</div><div class="step-label">Payment</div></div>
+      <div class="step-connector"></div>
+      <div class="checkout-step"><div class="step-number">3</div><div class="step-label">Confirmation</div></div>
+    </div>
+  </div>
+  <div class="comp-label">.checkout-steps / .checkout-step / .active / .complete / .step-connector</div>
+
+</div>
+</body>
+</html>

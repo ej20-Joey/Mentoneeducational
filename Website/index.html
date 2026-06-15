@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentone Educational — Medical &amp; Educational Supplies Australia</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Australia's #1 Medical Education Supplier</span>
+        <h1 class="hero-title">Equipping the Next Generation of Healthcare Professionals</h1>
+        <p class="hero-subtitle">The largest range of anatomical models, medical simulation and health education products in Australia. Trusted by universities, hospitals and schools since 1979.</p>
+        <div class="hero-actions">
+          <a href="discovery/plp.html" class="btn btn-primary btn-lg">Shop Simulation</a>
+          <a href="discovery/plp.html" class="btn btn-outline btn-lg" style="border-color:white;color:white;">Browse Anatomy Models</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-grid">
+        <div class="trust-item"><div class="trust-icon">🚚</div><div class="trust-title">Free Shipping</div><div class="trust-desc">On orders over $150</div></div>
+        <div class="trust-item"><div class="trust-icon">🏆</div><div class="trust-title">45+ Years Experience</div><div class="trust-desc">Trusted since 1979</div></div>
+        <div class="trust-item"><div class="trust-icon">🇦🇺</div><div class="trust-title">Australian Owned</div><div class="trust-desc">Melbourne based team</div></div>
+        <div class="trust-item"><div class="trust-icon">🔄</div><div class="trust-title">Easy Returns</div><div class="trust-desc">30-day return policy</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOP BY CATEGORY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <a href="discovery/plp.html" class="section-link">View all categories →</a>
+      </div>
+      <div class="category-grid">
+        <a href="discovery/plp.html" class="category-card">
+          <div class="category-card-image">🫀</div>
+          <div class="category-card-body"><div class="category-card-name">Simulation</div><div class="category-card-count">12 sub-categories</div></div>
+        </a>
+        <a href="discovery/plp.html" class="category-card">
+          <div class="category-card-image">🦴</div>
+          <div class="category-card-body"><div class="category-card-name">Anatomy Models</div><div class="category-card-count">24 types</div></div>
+        </a>
+        <a href="discovery/plp.html" class="category-card">
+          <div class="category-card-image">📚</div>
+          <div class="category-card-body"><div class="category-card-name">Health Education</div><div class="category-card-count">8 categories</div></div>
+        </a>
+        <a href="discovery/plp.html" class="category-card">
+          <div class="category-card-image">💊</div>
+          <div class="category-card-body"><div class="category-card-name">Demo Dose</div><div class="category-card-count">Simulated medications</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section" style="background:var(--color-bg-subtle); padding: var(--space-16) 0;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="carousel-header-controls">
+          <button class="carousel-btn carousel-btn-prev" aria-label="Previous products">&#8249;</button>
+          <button class="carousel-btn carousel-btn-next" aria-label="Next products">&#8250;</button>
+        </div>
+      </div>
+      <div class="featured-carousel">
+        <div class="featured-carousel-track" id="featured-track">
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-new">New</span></div></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: C18</div><div class="product-card-brand">3B Scientific</div><a href="discovery/pdp.html" class="product-card-name">4-Part Brain Model with Arteries</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-current">$189.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(1,'4-Part Brain Model')">Add to Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-sale">Sale</span></div></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: EZ-SK01</div><div class="product-card-brand">Erler Zimmer</div><a href="discovery/pdp.html" class="product-card-name">Full Skeleton Model — 170cm Natural</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-was">$650.00</span><span class="price-current price-sale">$520.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(2,'Full Skeleton Model')">Add to Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: S3201</div><div class="product-card-brand">Gaumard</div><a href="discovery/pdp.html" class="product-card-name">HAL Adult Patient Simulator S3201</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-current">$14,200.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('HAL Adult Patient Simulator S3201')">Enquire Now</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-accent">Best Seller</span></div></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: PP-MANIKIN-1</div><div class="product-card-brand">Prestan</div><a href="discovery/pdp.html" class="product-card-name">CPR Manikin Adult with Rate Monitor</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-current">$245.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(4,'CPR Manikin')">Add to Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-primary">Featured</span></div></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: 3BS-HT4D</div><div class="product-card-brand">3B Scientific</div><a href="discovery/pdp.html" class="product-card-name">Deluxe 4-Part Heart Model</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-current">$145.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(5,'Deluxe Heart Model')">Add to Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: NSC-BPT1</div><div class="product-card-brand">NASCO</div><a href="discovery/pdp.html" class="product-card-name">Blood Pressure Training Arm</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-current">$320.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(6,'BP Training Arm')">Add to Cart</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: SYN-HUM1</div><div class="product-card-brand">SynDaver</div><a href="discovery/pdp.html" class="product-card-name">SynDaver Synthetic Human</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-current">$45,000.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('SynDaver Synthetic Human')">Enquire Now</button></div>
+          </div>
+          <div class="product-card">
+            <div class="product-card-image"><img src="../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-sale">Sale</span></div></div>
+            <div class="product-card-body"><div class="product-card-sku">SKU: SOM-BR01</div><div class="product-card-brand">SOMSO</div><a href="discovery/pdp.html" class="product-card-name">Classic Brain Model — Natural Size</a></div>
+            <div class="product-card-footer"><div class="product-card-price"><span class="price-was">$420.00</span><span class="price-current price-sale">$359.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(8,'Classic Brain Model')">Add to Cart</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STRIP -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><h2 class="section-title">Our Brands</h2><a href="discovery/brands.html" class="section-link">All brands →</a></div>
+      <div class="brand-logos">
+        <a href="discovery/brand-landing.html" class="brand-logo-item">3B Scientific</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">Gaumard</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">Prestan</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">SynDaver</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">iSimulate</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">SOMSO</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">Erler Zimmer</a>
+        <a href="discovery/brand-landing.html" class="brand-logo-item">NASCO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="container">
+      <div class="about-strip-grid">
+        <div class="about-strip-text">
+          <h2>Trusted by Australian educators and clinicians since 1979</h2>
+          <p>Mentone Educational stocks the largest range of medical simulation, anatomical models and health education products in Australia. We supply universities, hospitals, nursing schools and healthcare professionals across Australasia.</p>
+          <a href="info/about.html" class="btn btn-outline">Learn About Us</a>
+        </div>
+        <div class="about-strip-stats">
+          <div class="stat"><div class="stat-number">45+</div><div class="stat-label">Years in Business</div></div>
+          <div class="stat"><div class="stat-number">21</div><div class="stat-label">Global Brands</div></div>
+          <div class="stat"><div class="stat-number">10+</div><div class="stat-label">Countries Sourced</div></div>
+          <div class="stat"><div class="stat-number">1000s</div><div class="stat-label">Products In Stock</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/shared.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* ============================================================
+   COMPONENT: NAVIGATION
+   ============================================================ */
+
+/* ── BREADCRUMB ─────────────────────────────────────────── */
+.breadcrumb { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+.breadcrumb-item { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.breadcrumb-item a { color: var(--color-text-muted); }
+.breadcrumb-item a:hover { color: var(--color-primary); text-decoration: underline; }
+.breadcrumb-sep { color: var(--color-border-strong); font-size: var(--font-size-xs); }
+.breadcrumb-item.active { color: var(--color-text); font-weight: var(--font-weight-medium); }
+
+/* ── PAGINATION ─────────────────────────────────────────── */
+.pagination { display: flex; align-items: center; justify-content: center; gap: var(--space-2); }
+.pagination-btn {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+  background: var(--color-bg);
+}
+.pagination-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.pagination-btn.active { background: var(--color-primary); border-color: var(--color-primary); color: white; }
+.pagination-btn:disabled { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+.pagination-ellipsis { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); font-size: var(--font-size-sm); }
+
+/* ── TABS ───────────────────────────────────────────────── */
+.tabs { border-bottom: 2px solid var(--color-border); display: flex; gap: 0; }
+.tab {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  white-space: nowrap;
+  background: none;
+  border-top: none; border-left: none; border-right: none;
+}
+.tab:hover { color: var(--color-text); }
+.tab.active { color: var(--color-primary); border-bottom-color: var(--color-primary); font-weight: var(--font-weight-semibold); }
+
+/* Pill tabs */
+.tabs-pill { border-bottom: none; gap: var(--space-2); padding: var(--space-1); background: var(--color-bg-muted); border-radius: var(--radius-full); display: inline-flex; }
+.tab-pill {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  cursor: pointer; border: none; background: none;
+  transition: all var(--transition-fast);
+}
+.tab-pill:hover { color: var(--color-text); }
+.tab-pill.active { background: white; color: var(--color-primary); font-weight: var(--font-weight-semibold); box-shadow: var(--shadow-sm); }
+
+/* ── CHECKOUT STEPS ─────────────────────────────────────── */
+.checkout-steps { display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-12); }
+.checkout-step { display: flex; align-items: center; gap: var(--space-3); flex: 1; max-width: 200px; }
+.step-number {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-full);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+  background: var(--color-bg-muted); color: var(--color-text-muted);
+  border: 2px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+.checkout-step.active   .step-number { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+.checkout-step.complete .step-number { background: var(--color-success); color: white; border-color: var(--color-success); }
+.step-label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text-muted); }
+.checkout-step.active   .step-label { color: var(--color-primary); font-weight: var(--font-weight-semibold); }
+.checkout-step.complete .step-label { color: var(--color-success); }
+.step-connector { flex: 1; height: 2px; background: var(--color-border); margin: 0 var(--space-3); }
+.step-connector.complete { background: var(--color-success); }

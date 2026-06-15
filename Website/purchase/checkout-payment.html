@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Payment — Mentone Educational</title><link rel="stylesheet" href="../../css/tokens.css"><link rel="stylesheet" href="../../css/global.css"><link rel="stylesheet" href="../../css/layout.css"><link rel="stylesheet" href="../../css/components.css"></head>
+<body><div id="site-header"></div>
+<main><div class="container" style="padding:var(--space-10) 0;max-width:900px;">
+  <h1 style="font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);margin-bottom:var(--space-8);">Checkout</h1>
+  <div class="checkout-steps">
+    <div class="checkout-step complete"><div class="step-number">✓</div><div class="step-label">Details</div></div>
+    <div class="step-connector complete"></div>
+    <div class="checkout-step active"><div class="step-number">2</div><div class="step-label">Payment</div></div>
+    <div class="step-connector"></div>
+    <div class="checkout-step"><div class="step-number">3</div><div class="step-label">Confirmation</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:var(--space-10);align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:var(--space-8);">
+      <div style="background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);">
+        <div style="font-size:var(--font-size-sm);color:var(--color-text-muted);">Shipping to</div>
+        <div style="font-size:var(--font-size-sm);font-weight:var(--font-weight-medium);margin-top:var(--space-1);">Jane Smith — 123 Main Street, Melbourne VIC 3000</div>
+        <a href="checkout-details.html" style="font-size:var(--font-size-xs);color:var(--color-primary);">Change</a>
+      </div>
+      <div>
+        <h2 style="font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-5);">Payment Method</h2>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-6);">
+          <label style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);border:2px solid var(--color-primary);border-radius:var(--radius-md);cursor:pointer;background:var(--color-bg);">
+            <input type="radio" name="payment" checked style="accent-color:var(--color-primary);">
+            <span style="font-size:var(--font-size-sm);font-weight:var(--font-weight-medium);">💳 Credit / Debit Card</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);border:1.5px solid var(--color-border);border-radius:var(--radius-md);cursor:pointer;">
+            <input type="radio" name="payment" style="accent-color:var(--color-primary);">
+            <span style="font-size:var(--font-size-sm);font-weight:var(--font-weight-medium);">🏦 Bank Transfer / EFT</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);border:1.5px solid var(--color-border);border-radius:var(--radius-md);cursor:pointer;">
+            <input type="radio" name="payment" style="accent-color:var(--color-primary);">
+            <span style="font-size:var(--font-size-sm);font-weight:var(--font-weight-medium);">📋 Purchase Order</span>
+          </label>
+        </div>
+        <div style="display:grid;gap:var(--space-4);">
+          <div class="form-group"><label class="form-label">Card Number</label><input type="text" class="form-input" placeholder="1234 5678 9012 3456"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);">
+            <div class="form-group"><label class="form-label">Expiry</label><input type="text" class="form-input" placeholder="MM / YY"></div>
+            <div class="form-group"><label class="form-label">CVV</label><input type="text" class="form-input" placeholder="123"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Name on Card</label><input type="text" class="form-input" placeholder="Jane Smith"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:var(--space-4);">
+        <a href="checkout-details.html" class="btn btn-ghost">← Back</a>
+        <a href="order-confirmation.html" class="btn btn-accent btn-lg" style="flex:1;text-align:center;">Place Order — $679.00</a>
+      </div>
+    </div>
+    <div class="order-summary">
+      <div class="order-summary-title">Order Summary</div>
+      <div class="order-summary-row"><span class="label">Subtotal</span><span>$679.00</span></div>
+      <div class="order-summary-row"><span class="label">Shipping</span><span style="color:var(--color-success);">Free</span></div>
+      <div class="order-summary-row total"><span class="label">Total (inc. GST)</span><span>$679.00</span></div>
+      <div style="text-align:center;font-size:var(--font-size-xs);color:var(--color-text-muted);">🔒 Secured by SSL encryption</div>
+    </div>
+  </div>
+</div></main>
+<div id="site-footer"></div><script src="../../js/shared.js"></script><script src="../../js/main.js"></script></body></html>

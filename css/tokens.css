@@ -1,0 +1,272 @@
+/* ============================================
+   MENTONE EDUCATIONAL — DESIGN TOKENS
+   Source of truth: js/mentone-design-tokens.json
+   ============================================ */
+
+:root {
+
+  /* =========================================
+     GLOBAL PALETTE
+     ========================================= */
+
+  /* Teal — primary brand (WCAG AA: teal-400 on white) */
+  --teal-50:  #e5f4fa;
+  --teal-100: #b3ddf0;
+  --teal-200: #66bce1;
+  --teal-300: #2a9db5;
+  --teal-400: #0077a8;
+  --teal-500: #005a80;
+  --teal-600: #004466;
+  --teal-700: #003350;
+  --teal-800: #00223a;
+  --teal-900: #001122;
+
+  /* Red — accent / CTA */
+  --red-50:  #fdf0ee;
+  --red-100: #f9cec7;
+  --red-200: #f3a093;
+  --red-300: #ed725f;
+  --red-400: #e8401c;
+  --red-500: #c23215;
+  --red-600: #9c2510;
+  --red-700: #76190b;
+  --red-800: #500e06;
+  --red-900: #2a0401;
+
+  /* Neutral — greyscale */
+  --neutral-0:    #ffffff;
+  --neutral-50:   #f5f5f5;
+  --neutral-100:  #e8e8e8;
+  --neutral-200:  #d0d0d0;
+  --neutral-300:  #b0b0b0;
+  --neutral-400:  #999999;
+  --neutral-500:  #777777;
+  --neutral-600:  #555555;
+  --neutral-700:  #444444;
+  --neutral-800:  #2a2a2a;
+  --neutral-900:  #1a1a1a;
+  --neutral-1000: #000000;
+
+  /* Green — success states */
+  --green-50:  #f0faf4;
+  --green-300: #5fbe8a;
+  --green-500: #28a745;
+  --green-700: #1a7a31;
+
+  /* Amber — warning states */
+  --amber-50:  #fff8e6;
+  --amber-300: #ffd166;
+  --amber-500: #f59e0b;
+  --amber-700: #b45309;
+
+  /* =========================================
+     SEMANTIC COLOUR TOKENS
+     ========================================= */
+
+  /* Brand */
+  --color-primary:        var(--teal-400);
+  --color-primary-light:  var(--teal-200);
+  --color-primary-hover:  var(--teal-500);
+  --color-primary-dark:   var(--teal-600);
+  --color-primary-active: var(--teal-600);
+  --color-primary-subtle: var(--teal-50);
+  --color-on-primary:     var(--neutral-0);
+
+  --color-accent:         var(--red-400);
+  --color-accent-hover:   var(--red-500);
+  --color-on-accent:      var(--neutral-0);
+
+  /* Text */
+  --color-text:           var(--neutral-700);
+  --color-text-heading:   var(--neutral-900);
+  --color-text-muted:     var(--neutral-600);
+  --color-text-light:     var(--neutral-400);
+  --color-text-inverse:   var(--neutral-0);
+  --color-text-link:      var(--teal-400);
+  --color-text-link-hover: var(--teal-600);
+  --color-text-disabled:  var(--neutral-300);
+
+  /* Backgrounds */
+  --color-bg:             var(--neutral-0);
+  --color-bg-subtle:      var(--neutral-50);
+  --color-bg-muted:       var(--neutral-100);
+  --color-bg-overlay:     rgba(0,0,0,0.48);
+  --color-bg-nav:         var(--neutral-0);
+  --color-bg-topbar:      var(--neutral-900);
+  --color-bg-footer:      var(--neutral-800);
+
+  /* Borders */
+  --color-border:         var(--neutral-100);
+  --color-border-strong:  var(--neutral-200);
+  --color-border-brand:   var(--teal-400);
+  --color-border-focus:   var(--teal-400);
+
+  /* Feedback */
+  --color-success:        var(--green-500);
+  --color-success-subtle: var(--green-50);
+  --color-warning:        var(--amber-500);
+  --color-warning-subtle: var(--amber-50);
+  --color-error:          var(--red-500);
+  --color-error-subtle:   var(--red-50);
+  --color-info:           var(--teal-400);
+  --color-sale:           var(--red-400);
+  --color-sale-subtle:    var(--red-50);
+
+  /* =========================================
+     TYPOGRAPHY
+     ========================================= */
+
+  --font-family:          'Open Sans', Arial, sans-serif;
+  --font-family-mono:     'Courier New', monospace;
+
+  --font-size-xs:         0.6875rem;   /* 11px */
+  --font-size-sm:         0.8125rem;   /* 13px */
+  --font-size-base:       0.875rem;    /* 14px */
+  --font-size-md:         1rem;        /* 16px */
+  --font-size-lg:         1.125rem;    /* 18px */
+  --font-size-xl:         1.375rem;    /* 22px */
+  --font-size-2xl:        1.625rem;    /* 26px */
+  --font-size-3xl:        2rem;        /* 32px */
+  --font-size-4xl:        2.5rem;      /* 40px */
+
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  --line-height-tight:    1.2;
+  --line-height-normal:   1.5;
+  --line-height-relaxed:  1.7;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide:   0.05em;
+  --letter-spacing-wider:  0.1em;
+
+  /* =========================================
+     SPACING  (4px base)
+     ========================================= */
+
+  --space-0:  0;
+  --space-1:  0.25rem;    /*  4px */
+  --space-2:  0.5rem;     /*  8px */
+  --space-3:  0.75rem;    /* 12px */
+  --space-4:  1rem;       /* 16px */
+  --space-5:  1.25rem;    /* 20px */
+  --space-6:  1.5rem;     /* 24px */
+  --space-8:  2rem;       /* 32px */
+  --space-10: 2.5rem;     /* 40px */
+  --space-12: 3rem;       /* 48px */
+  --space-16: 4rem;       /* 64px */
+  --space-20: 5rem;       /* 80px */
+  --space-24: 6rem;       /* 96px */
+
+  /* =========================================
+     LAYOUT
+     ========================================= */
+
+  --container-max:     1200px;
+  --container-content: 1200px;
+  --container-narrow:  800px;
+  --container-padding: 1.25rem;    /* 20px */
+  --nav-height:        70px;
+  --topbar-height:     36px;
+
+  /* =========================================
+     BORDER RADIUS
+     ========================================= */
+
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-base: 4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   16px;   /* kept for modals / hero */
+  --radius-full: 9999px;
+
+  /* =========================================
+     SHADOWS
+     ========================================= */
+
+  --shadow-sm:         0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:         0 4px 12px rgba(0,0,0,0.15);
+  --shadow-lg:         0 8px 24px rgba(0,0,0,0.18);
+  --shadow-xl:         0 16px 40px rgba(0,0,0,0.14);
+  --shadow-nav:        0 2px 8px rgba(0,0,0,0.10);
+  --shadow-card:       0 2px 6px rgba(0,0,0,0.12);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* =========================================
+     TRANSITIONS
+     ========================================= */
+
+  --transition-fast:   100ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow:   300ms ease;
+
+  /* =========================================
+     FOCUS RING
+     ========================================= */
+
+  --focus-ring: 0 0 0 3px rgba(0,119,168,0.18);
+
+  /* =========================================
+     COMPONENT TOKENS
+     ========================================= */
+
+  /* Navigation */
+  --nav-bg:              var(--color-bg-nav);
+  --nav-shadow:          var(--shadow-nav);
+  --nav-link-color:      var(--color-text);
+  --nav-link-hover:      var(--color-primary);
+  --nav-item-px:         var(--space-4);
+  --nav-item-py:         var(--space-3);
+  --nav-dropdown-bg:     var(--color-bg);
+  --nav-dropdown-border: var(--color-border);
+  --nav-dropdown-shadow: var(--shadow-md);
+
+  /* Topbar */
+  --topbar-bg:           var(--color-bg-topbar);
+  --topbar-text:         var(--color-text-inverse);
+  --topbar-link-hover:   var(--neutral-300);
+
+  /* Footer */
+  --footer-bg:           var(--color-bg-footer);
+  --footer-py:           var(--space-10);
+  --footer-heading-color: var(--teal-400);
+  --footer-text:         var(--neutral-300);
+  --footer-link:         var(--neutral-400);
+  --footer-link-hover:   var(--neutral-0);
+
+  /* Card */
+  --card-bg:             var(--color-bg);
+  --card-border:         var(--color-border);
+  --card-radius:         var(--radius-base);
+  --card-shadow:         var(--shadow-card);
+  --card-shadow-hover:   var(--shadow-card-hover);
+  --card-padding:        var(--space-4);
+
+  /* Badge */
+  --badge-radius:        var(--radius-sm);
+  --badge-px:            var(--space-2);
+  --badge-py:            var(--space-1);
+  --badge-font-size:     var(--font-size-xs);
+  --badge-font-weight:   var(--font-weight-bold);
+  --badge-sale-bg:       var(--color-sale);
+  --badge-sale-text:     var(--neutral-0);
+  --badge-new-bg:        var(--color-success);
+  --badge-new-text:      var(--neutral-0);
+
+  /* Input */
+  --input-height:        40px;
+  --input-bg:            var(--color-bg);
+  --input-bg-disabled:   var(--color-bg-muted);
+  --input-border:        var(--color-border);
+  --input-border-focus:  var(--color-border-focus);
+  --input-border-error:  var(--color-error);
+  --input-radius:        var(--radius-sm);
+  --input-text:          var(--color-text);
+  --input-placeholder:   var(--color-text-light);
+  --input-px:            var(--space-3);
+  --input-py:            var(--space-2);
+  --input-font-size:     var(--font-size-base);
+}

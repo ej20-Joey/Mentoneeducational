@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation — Mentone Educational</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <style>
+    .plp-layout { display: grid; grid-template-columns: 260px 1fr; gap: var(--space-10); padding: var(--space-10) 0; }
+    .plp-sidebar { min-width: 0; }
+    .plp-main { min-width: 0; }
+    .active-filters { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+    .active-filter { display: flex; align-items: center; gap: var(--space-2); background: var(--color-bg-muted); border: 1px solid var(--color-border); border-radius: var(--radius-full); padding: var(--space-1) var(--space-3); font-size: var(--font-size-xs); }
+    .active-filter-remove { color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1; cursor: pointer; }
+    .mobile-filter-btn { display: none; }
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 480px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 1024px) { .plp-layout { grid-template-columns: 1fr; } .plp-sidebar { display: none; } .mobile-filter-btn { display: flex; } }
+  </style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <!-- CATEGORY HEADER -->
+  <div style="background:var(--color-bg-subtle);border-bottom:1px solid var(--color-border);padding:var(--space-8) 0;">
+    <div class="container">
+      <h1 style="font-size:var(--font-size-3xl);font-weight:var(--font-weight-bold);margin-bottom:var(--space-2);">Simulation</h1>
+      <p style="color:var(--color-text-muted);max-width:600px;">High-fidelity medical simulation products for clinical training. From CPR manikins to full patient simulators.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="breadcrumb" style="padding:var(--space-4) 0;">
+      <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-item active">Simulation</span>
+    </nav>
+    <div class="plp-layout">
+      <!-- SIDEBAR -->
+      <aside class="plp-sidebar">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-4);">
+          <strong style="font-size:var(--font-size-sm);">Filters</strong>
+          <a href="plp.html" style="font-size:var(--font-size-xs);color:var(--color-primary);">Clear all</a>
+        </div>
+        <div class="filter-sidebar">
+          <div class="filter-group">
+            <div class="filter-group-header">Category <span class="filter-arrow">▾</span></div>
+            <div class="filter-group-body">
+              <label class="filter-option"><input type="checkbox" checked> <span class="filter-option-label">Advanced Life Support</span> <span class="filter-option-count">48</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">Airway Management</span> <span class="filter-option-count">32</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">CPR & BLS</span> <span class="filter-option-count">27</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">Ultrasound</span> <span class="filter-option-count">19</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">Surgical Simulation</span> <span class="filter-option-count">15</span></label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-group-header">Brand <span class="filter-arrow">▾</span></div>
+            <div class="filter-group-body">
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">3B Scientific</span> <span class="filter-option-count">64</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">Gaumard</span> <span class="filter-option-count">18</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">Prestan</span> <span class="filter-option-count">12</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">iSimulate</span> <span class="filter-option-count">9</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">SurgiReal</span> <span class="filter-option-count">7</span></label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-group-header">Price Range <span class="filter-arrow">▾</span></div>
+            <div class="filter-group-body">
+              <div class="filter-price-inputs">
+                <input type="number" class="form-input" placeholder="Min" value="0">
+                <span class="filter-price-sep">–</span>
+                <input type="number" class="form-input" placeholder="Max">
+              </div>
+              <button class="btn btn-outline btn-sm btn-full" style="margin-top:var(--space-2);">Apply</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-group-header">Availability <span class="filter-arrow">▾</span></div>
+            <div class="filter-group-body">
+              <label class="filter-option"><input type="checkbox" checked> <span class="filter-option-label">In Stock</span></label>
+              <label class="filter-option"><input type="checkbox"> <span class="filter-option-label">Made to Order</span></label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="plp-main">
+        <div class="sort-bar">
+          <span class="sort-bar-count">Showing 48 products</span>
+          <div class="sort-bar-controls">
+            <button class="btn btn-ghost btn-sm mobile-filter-btn">⚙ Filters</button>
+            <select class="sort-select">
+              <option>Sort: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest First</option>
+              <option>Best Rated</option>
+            </select>
+            <div class="view-toggle">
+              <button class="view-btn active">⊞</button>
+              <button class="view-btn">☰</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="active-filters">
+          <span class="active-filter">Advanced Life Support <span class="active-filter-remove">×</span></span>
+          <span class="active-filter">In Stock <span class="active-filter-remove">×</span></span>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-new">New</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: GAU-S3201</div><div class="product-card-brand">Gaumard</div><a href="pdp.html" class="product-card-name">HAL Adult Patient Simulator S3201</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$14,200.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(1,'HAL Simulator')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-primary">Featured</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: PP-MAN-AD1</div><div class="product-card-brand">Prestan</div><a href="pdp.html" class="product-card-name">CPR Manikin Adult with Rate Monitor</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$245.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(2,'CPR Manikin')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-sale">Sale</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: 3BS-AMT01</div><div class="product-card-brand">3B Scientific</div><a href="pdp.html" class="product-card-name">Airway Management Trainer with Laryngoscope</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-was">$1,100.00</span><span class="price-current price-sale">$890.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(3,'Airway Trainer')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: GAU-S2209</div><div class="product-card-brand">Gaumard</div><a href="pdp.html" class="product-card-name">Newborn HAL S2209 Infant Simulator</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$8,450.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('Newborn HAL S2209 Infant Simulator')">Enquire Now</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-accent">Best Seller</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: NSC-IV-01</div><div class="product-card-brand">NASCO</div><a href="pdp.html" class="product-card-name">IV Injection Training Arm</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$185.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(5,'IV Arm')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: ISM-ALSI1</div><div class="product-card-brand">iSimulate</div><a href="pdp.html" class="product-card-name">ALSi Patient Monitor Simulator</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$3,200.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(6,'Monitor Sim')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: SS-LAP-01</div><div class="product-card-brand">Surgical Science</div><a href="pdp.html" class="product-card-name">Laparoscopy VR Simulator LapSim</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$28,500.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('Laparoscopy VR Simulator LapSim')">Enquire Now</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: MX-USP-AB</div><div class="product-card-brand">Medical-X</div><a href="pdp.html" class="product-card-name">Ultrasound Training Phantom — Abdomen</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$1,450.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(8,'US Phantom')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-new">New</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: 3BS-NET01</div><div class="product-card-brand">3B Scientific</div><a href="pdp.html" class="product-card-name">Neurological Examination Trainer</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$620.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(9,'Neuro Trainer')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-muted">Out of Stock</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: PP-CH-4PK</div><div class="product-card-brand">Prestan</div><a href="pdp.html" class="product-card-name">CPR Manikin Child 4-Pack with Monitor</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$780.00</span></div><button class="btn btn-primary btn-sm" disabled>Out of Stock</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: NSC-WC-01</div><div class="product-card-brand">NASCO</div><a href="pdp.html" class="product-card-name">Wound Care & Suturing Practice Kit</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$145.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(11,'Suture Kit')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: GAU-S2210</div><div class="product-card-brand">Gaumard</div><a href="pdp.html" class="product-card-name">Premature Infant Simulator Preemie HAL</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$11,900.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('Premature Infant Simulator Preemie HAL')">Enquire Now</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"><div class="product-card-badges"><span class="badge badge-sale">Sale</span></div></div><div class="product-card-body"><div class="product-card-sku">SKU: DD-MED-60</div><div class="product-card-brand">Demo Dose</div><a href="pdp.html" class="product-card-name">Simulated Medication Training Set 60pc</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-was">$110.00</span><span class="price-current price-sale">$89.00</span></div><button class="btn btn-primary btn-sm" onclick="addToCart(13,'Demo Dose Set')">Add to Cart</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: ISM-R360</div><div class="product-card-brand">iSimulate</div><a href="pdp.html" class="product-card-name">REALITi 360 Emergency Simulation Platform</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$5,800.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('REALITi 360 Emergency Simulation Platform')">Enquire Now</button></div></div>
+
+          <div class="product-card"><div class="product-card-image"><img src="../../assets/Images/No_Image_Available.jpg" alt="Product image" style="width:100%;height:100%;object-fit:cover;"></div><div class="product-card-body"><div class="product-card-sku">SKU: SYN-DOG01</div><div class="product-card-brand">SynDaver</div><a href="pdp.html" class="product-card-name">SynDaver Surgical Dog Model</a></div><div class="product-card-footer"><div class="product-card-price"><span class="price-current">$9,750.00</span></div><button class="btn btn-outline btn-sm" onclick="openEnquiry('SynDaver Surgical Dog Model')">Enquire Now</button></div></div>
+        </div>
+
+        <div style="margin-top:var(--space-10);display:flex;justify-content:center;">
+          <div class="pagination">
+            <button class="pagination-btn">‹</button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">4</button>
+            <button class="pagination-btn">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<div id="site-footer"></div>
+<script src="../../js/shared.js"></script>
+<script src="../../js/main.js"></script>
+</body>
+</html>
