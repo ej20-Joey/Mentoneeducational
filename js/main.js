@@ -119,6 +119,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Category carousel arrows
+  const categoryTrack = document.getElementById('category-track');
+  if (categoryTrack) {
+    const catCardWidth = () => categoryTrack.querySelector('.category-card').offsetWidth + 16;
+    document.querySelector('.category-carousel-btn-prev')?.addEventListener('click', () => {
+      categoryTrack.scrollBy({ left: -catCardWidth(), behavior: 'smooth' });
+    });
+    document.querySelector('.category-carousel-btn-next')?.addEventListener('click', () => {
+      categoryTrack.scrollBy({ left: catCardWidth(), behavior: 'smooth' });
+    });
+  }
+
   document.querySelectorAll('.filter-group-header').forEach(header => {
     header.addEventListener('click', () => {
       const body = header.nextElementSibling;
