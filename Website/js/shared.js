@@ -33,7 +33,7 @@ function buildHeader(base) {
   <div class="container">
     <div class="header-main">
       <a href="${base}index.html" class="header-logo">
-        <img src="${assetBase}assets/logo/Mentone_Logo.png" alt="Mentone Educational" class="header-logo-img">
+        <img src="${assetBase}assets/Logo/Mentone_Logo.png" alt="Mentone Educational" class="header-logo-img">
       </a>
       <div class="header-search">
         <form class="search-form" onsubmit="handleSearch(event)">
