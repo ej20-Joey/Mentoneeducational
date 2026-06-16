@@ -229,9 +229,11 @@ function renderSharedComponents() {
 
   // Mark active nav item
   const currentPage = window.location.pathname.split('/').pop();
-  document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href').endsWith(currentPage)) link.classList.add('active');
-  });
+  if (currentPage) {
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href').endsWith(currentPage)) link.classList.add('active');
+    });
+  }
 }
 
 function toggleNav() {
