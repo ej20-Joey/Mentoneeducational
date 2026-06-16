@@ -12,7 +12,7 @@ function getBasePath() {
 }
 
 function buildHeader(base) {
-  const assetBase = '../' + base;
+  const assetBase = base;
   return `
 <div class="top-bar">
   <div class="container">
