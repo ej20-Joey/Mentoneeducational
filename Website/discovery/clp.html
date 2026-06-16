@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation — Mentone Educational</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <style>
+    .clp-hero {
+      background: linear-gradient(135deg, var(--teal-700) 0%, var(--teal-500) 60%, var(--teal-300) 100%);
+      padding: var(--space-16) 0;
+      color: var(--color-text-inverse);
+    }
+    .clp-hero-label {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: var(--letter-spacing-wider);
+      text-transform: uppercase;
+      color: var(--teal-100);
+      margin-bottom: var(--space-3);
+    }
+    .clp-hero h1 {
+      font-size: var(--font-size-4xl);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-tight);
+      margin-bottom: var(--space-4);
+      color: var(--color-text-inverse);
+    }
+    .clp-hero p {
+      font-size: var(--font-size-lg);
+      line-height: var(--line-height-relaxed);
+      max-width: 620px;
+      color: var(--teal-100);
+      margin-bottom: var(--space-8);
+    }
+    .clp-hero-meta {
+      display: flex;
+      gap: var(--space-6);
+      font-size: var(--font-size-sm);
+      color: var(--teal-100);
+    }
+    .clp-hero-meta strong {
+      color: var(--neutral-0);
+    }
+
+    /* Sub-category tiles */
+    .clp-subcats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+    }
+    .clp-subcat-tile {
+      display: flex;
+      flex-direction: column;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      text-decoration: none;
+      transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
+      background: var(--color-bg);
+    }
+    .clp-subcat-tile:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+    .clp-subcat-tile:hover .clp-subcat-icon {
+      background: var(--color-primary-subtle);
+    }
+    .clp-subcat-icon {
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-bg-subtle);
+      font-size: 2.5rem;
+      transition: background var(--transition-normal);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .clp-subcat-body {
+      padding: var(--space-4) var(--space-5);
+    }
+    .clp-subcat-name {
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-heading);
+      margin-bottom: var(--space-1);
+    }
+    .clp-subcat-count {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+    }
+    .clp-subcat-arrow {
+      margin-left: auto;
+      color: var(--color-primary);
+      font-size: var(--font-size-lg);
+      line-height: 1;
+    }
+    .clp-subcat-footer {
+      display: flex;
+      align-items: center;
+      padding: var(--space-3) var(--space-5);
+      border-top: 1px solid var(--color-border);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-primary);
+    }
+
+    /* Section headings */
+    .clp-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: var(--space-6);
+    }
+    .clp-section-head h2 {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-heading);
+    }
+
+    /* Brand strip */
+    .clp-brands {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--space-4);
+    }
+    .clp-brand-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-5) var(--space-4);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      text-align: center;
+      transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
+      background: var(--color-bg);
+    }
+    .clp-brand-tile:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+    .clp-brand-mark {
+      width: 56px;
+      height: 56px;
+      background: var(--color-bg-muted);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary);
+    }
+    .clp-brand-name {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text);
+    }
+    .clp-brand-count {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+    }
+
+    /* Promo banner */
+    .clp-promo {
+      background: var(--color-primary-subtle);
+      border: 1.5px solid var(--color-primary-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8) var(--space-10);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-6);
+    }
+    .clp-promo h3 {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-2);
+    }
+    .clp-promo p {
+      font-size: var(--font-size-base);
+      color: var(--color-text-muted);
+      max-width: 480px;
+    }
+
+    @media (max-width: 1024px) {
+      .clp-subcats { grid-template-columns: repeat(2, 1fr); }
+      .clp-brands { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .clp-hero h1 { font-size: var(--font-size-3xl); }
+      .clp-subcats { grid-template-columns: 1fr; }
+      .clp-brands { grid-template-columns: repeat(2, 1fr); }
+      .clp-promo { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+
+  <!-- HERO -->
+  <section class="clp-hero">
+    <div class="container">
+      <p class="clp-hero-label">Category</p>
+      <h1>Simulation</h1>
+      <p>High-fidelity medical simulation for clinical education. From entry-level CPR manikins to full patient simulators used in hospital training centres across Australia.</p>
+      <div class="clp-hero-meta">
+        <span><strong>6</strong> sub-categories</span>
+        <span><strong>148</strong> products</span>
+        <span><strong>8</strong> brands</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--color-bg-subtle);border-bottom:1px solid var(--color-border);">
+    <div class="container">
+      <nav class="breadcrumb" style="padding:var(--space-3) 0;">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-item active">Simulation</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SUB-CATEGORIES -->
+  <section style="padding:var(--space-12) 0;">
+    <div class="container">
+      <div class="clp-section-head">
+        <h2>Browse by Sub-Category</h2>
+        <a href="plp.html" style="font-size:var(--font-size-sm);color:var(--color-primary);">View all products →</a>
+      </div>
+      <div class="clp-subcats">
+
+        <a href="plp.html" class="clp-subcat-tile">
+          <div class="clp-subcat-icon">🫀</div>
+          <div class="clp-subcat-body">
+            <div class="clp-subcat-name">CPR &amp; BLS</div>
+            <div class="clp-subcat-count">27 products</div>
+          </div>
+          <div class="clp-subcat-footer">Shop now <span class="clp-subcat-arrow">›</span></div>
+        </a>
+
+        <a href="plp.html" class="clp-subcat-tile">
+          <div class="clp-subcat-icon">🫁</div>
+          <div class="clp-subcat-body">
+            <div class="clp-subcat-name">Airway Management</div>
+            <div class="clp-subcat-count">32 products</div>
+          </div>
+          <div class="clp-subcat-footer">Shop now <span class="clp-subcat-arrow">›</span></div>
+        </a>
+
+        <a href="plp.html" class="clp-subcat-tile">
+          <div class="clp-subcat-icon">🏥</div>
+          <div class="clp-subcat-body">
+            <div class="clp-subcat-name">Advanced Life Support</div>
+            <div class="clp-subcat-count">48 products</div>
+          </div>
+          <div class="clp-subcat-footer">Shop now <span class="clp-subcat-arrow">›</span></div>
+        </a>
+
+        <a href="plp.html" class="clp-subcat-tile">
+          <div class="clp-subcat-icon">🤖</div>
+          <div class="clp-subcat-body">
+            <div class="clp-subcat-name">Patient Simulators</div>
+            <div class="clp-subcat-count">18 products</div>
+          </div>
+          <div class="clp-subcat-footer">Shop now <span class="clp-subcat-arrow">›</span></div>
+        </a>
+
+        <a href="plp.html" class="clp-subcat-tile">
+          <div class="clp-subcat-icon">🔊</div>
+          <div class="clp-subcat-body">
+            <div class="clp-subcat-name">Ultrasound Training</div>
+            <div class="clp-subcat-count">19 products</div>
+          </div>
+          <div class="clp-subcat-footer">Shop now <span class="clp-subcat-arrow">›</span></div>
+        </a>
+
+        <a href="plp.html" class="clp-subcat-tile">
+          <div class="clp-subcat-icon">🔬</div>
+          <div class="clp-subcat-body">
+            <div class="clp-subcat-name">Surgical Simulation</div>
+            <div class="clp-subcat-count">15 products</div>
+          </div>
+          <div class="clp-subcat-footer">Shop now <span class="clp-subcat-arrow">›</span></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED BRANDS -->
+  <section style="padding:var(--space-12) 0;background:var(--color-bg-subtle);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);">
+    <div class="container">
+      <div class="clp-section-head">
+        <h2>Brands in Simulation</h2>
+        <a href="brands.html" style="font-size:var(--font-size-sm);color:var(--color-primary);">All brands →</a>
+      </div>
+      <div class="clp-brands">
+
+        <a href="brand-landing.html" class="clp-brand-tile">
+          <div class="clp-brand-mark">GAU</div>
+          <span class="clp-brand-name">Gaumard</span>
+          <span class="clp-brand-count">22 products</span>
+        </a>
+
+        <a href="brand-landing.html" class="clp-brand-tile">
+          <div class="clp-brand-mark">PP</div>
+          <span class="clp-brand-name">Prestan</span>
+          <span class="clp-brand-count">14 products</span>
+        </a>
+
+        <a href="brand-landing.html" class="clp-brand-tile">
+          <div class="clp-brand-mark">3B</div>
+          <span class="clp-brand-name">3B Scientific</span>
+          <span class="clp-brand-count">38 products</span>
+        </a>
+
+        <a href="brand-landing.html" class="clp-brand-tile">
+          <div class="clp-brand-mark">iSIM</div>
+          <span class="clp-brand-name">iSimulate</span>
+          <span class="clp-brand-count">9 products</span>
+        </a>
+
+        <a href="brand-landing.html" class="clp-brand-tile">
+          <div class="clp-brand-mark">SS</div>
+          <span class="clp-brand-name">Surgical Science</span>
+          <span class="clp-brand-count">7 products</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section style="padding:var(--space-12) 0;">
+    <div class="container">
+      <div class="clp-section-head">
+        <h2>Featured Products</h2>
+        <a href="plp.html" style="font-size:var(--font-size-sm);color:var(--color-primary);">View all 148 products →</a>
+      </div>
+      <div class="product-grid" style="grid-template-columns:repeat(4,1fr);">
+
+        <div class="product-card">
+          <div class="product-card-image">
+            <img src="../assets/product%20images/prod-img-lrg-1.png" alt="Product image" style="width:100%;height:100%;object-fit:cover;">
+            <div class="product-card-badges"><span class="badge badge-accent">Best Seller</span></div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-sku">SKU: PP-MAN-AD1</div>
+            <div class="product-card-brand">Prestan</div>
+            <a href="pdp.html" class="product-card-name">CPR Manikin Adult with Rate Monitor</a>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-card-price"><span class="price-current">$245.00</span></div>
+            <button class="btn btn-primary btn-sm" onclick="addToCart(1,'CPR Manikin')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image">
+            <img src="../assets/product%20images/prod-img-lrg-2.png" alt="Product image" style="width:100%;height:100%;object-fit:cover;">
+            <div class="product-card-badges"><span class="badge badge-new">New</span></div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-sku">SKU: GAU-S3201</div>
+            <div class="product-card-brand">Gaumard</div>
+            <a href="pdp.html" class="product-card-name">HAL Adult Patient Simulator S3201</a>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-card-price"><span class="price-current">$14,200.00</span></div>
+            <button class="btn btn-outline btn-sm" onclick="openEnquiry('HAL Adult Patient Simulator S3201')">Enquire Now</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image">
+            <img src="../assets/product%20images/prod-img-lrg-3.png" alt="Product image" style="width:100%;height:100%;object-fit:cover;">
+            <div class="product-card-badges"><span class="badge badge-sale">Sale</span></div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-sku">SKU: 3BS-AMT01</div>
+            <div class="product-card-brand">3B Scientific</div>
+            <a href="pdp.html" class="product-card-name">Airway Management Trainer with Laryngoscope</a>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-card-price"><span class="price-was">$1,100.00</span><span class="price-current price-sale">$890.00</span></div>
+            <button class="btn btn-primary btn-sm" onclick="addToCart(3,'Airway Trainer')">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image">
+            <img src="../assets/product%20images/prod-img-lrg-4.png" alt="Product image" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-sku">SKU: ISM-ALSI1</div>
+            <div class="product-card-brand">iSimulate</div>
+            <a href="pdp.html" class="product-card-name">ALSi Patient Monitor Simulator</a>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-card-price"><span class="price-current">$3,200.00</span></div>
+            <button class="btn btn-primary btn-sm" onclick="addToCart(4,'Monitor Sim')">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section style="padding:0 0 var(--space-12);">
+    <div class="container">
+      <div class="clp-promo">
+        <div>
+          <h3>Need help choosing the right simulator?</h3>
+          <p>Our team of medical education specialists can help you find the right solution for your training centre, budget, and clinical objectives.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);flex-shrink:0;">
+          <a href="../info/contact.html" class="btn btn-primary">Talk to a Specialist</a>
+          <a href="../info/about.html" class="btn btn-outline">About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="../js/shared.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
