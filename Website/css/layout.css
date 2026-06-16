@@ -185,17 +185,14 @@
 .nav-item-mega:hover .mega-dropdown { display: block; }
 
 .mega-band {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) 0 0;
 }
-.mega-band-info {
-  padding: var(--space-8);
-  background: var(--color-primary-subtle);
+.mega-band-inner {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--space-2);
+  align-items: baseline;
+  gap: var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--space-4);
 }
 .mega-band-label {
   font-size: var(--font-size-xs);
@@ -205,36 +202,19 @@
   color: var(--color-primary);
 }
 .mega-band-title {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-heading);
-  line-height: var(--line-height-tight);
 }
 .mega-band-meta {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
-  margin-top: var(--space-1);
-}
-.mega-band-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
-  margin-top: var(--space-4);
-}
-.mega-band-cta:hover { color: var(--color-primary-hover); text-decoration: underline; }
-.mega-band-image {
-  min-height: 160px;
-  overflow: hidden;
-  position: relative;
 }
 
 .mega-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: var(--space-6) var(--space-8);
+  padding: var(--space-3) 0 var(--space-6);
   gap: var(--space-1) var(--space-4);
 }
 .mega-link {
