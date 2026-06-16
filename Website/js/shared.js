@@ -159,9 +159,6 @@ function buildHeader(base) {
           </div>
         </li>
 
-        <li class="nav-item">
-          <a href="${base}discovery/plp.html" class="nav-link">Demo Dose</a>
-        </li>
 
       </ul>
     </div>
