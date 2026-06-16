@@ -59,38 +59,94 @@ function buildHeader(base) {
   <nav class="primary-nav" id="primaryNav">
     <div class="container">
       <ul class="nav-list">
-        <li class="nav-item">
-          <a href="${base}discovery/plp.html" class="nav-link">Simulation <span class="nav-arrow">▾</span></a>
-          <div class="nav-dropdown">
-            <a href="${base}discovery/plp.html" class="dropdown-link">Advanced Life Support (ALS)</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Airway Management</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">CPR &amp; Basic Life Support</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Obstetrics &amp; Gynaecology</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Surgical Simulation</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Ultrasound</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">View All Simulation →</a>
+
+        <li class="nav-item nav-item-mega">
+          <a href="${base}discovery/clp.html" class="nav-link">Simulation <span class="nav-arrow">▾</span></a>
+          <div class="mega-dropdown">
+            <div class="mega-band">
+              <div class="mega-band-info">
+                <span class="mega-band-label">Browse</span>
+                <h3 class="mega-band-title">Simulation</h3>
+                <p class="mega-band-meta">148 products · 8 brands</p>
+                <a href="${base}discovery/clp.html" class="mega-band-cta">View all Simulation →</a>
+              </div>
+              <div class="mega-band-image" style="background:linear-gradient(135deg,var(--teal-300) 0%,var(--teal-600) 60%,var(--teal-800) 100%);"></div>
+            </div>
+            <div class="mega-links">
+              <a href="${base}discovery/plp.html" class="mega-link">Advanced Life Support (ALS)</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Airway Management / Intubation</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Clinical Skills and Patient Care</a>
+              <a href="${base}discovery/plp.html" class="mega-link">CPR, Basic Life Support, Rescue &amp; First Aid</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Obstetrics &amp; Gynaecology</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Surgical Simulation</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Ultrasound</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Veterinary Skills</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Demo Dose / Simulated Medications</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Simulated Patient Monitor</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Wearable Simulation</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Virtual Dissection Tables</a>
+            </div>
           </div>
         </li>
-        <li class="nav-item">
+
+        <li class="nav-item nav-item-mega">
           <a href="${base}discovery/plp.html" class="nav-link">Anatomy Models <span class="nav-arrow">▾</span></a>
-          <div class="nav-dropdown">
-            <a href="${base}discovery/plp.html" class="dropdown-link">Human Anatomy Models</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Skeleton Models</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Heart &amp; Organ Models</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Microanatomy Models</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Synthetic Cadaver Models</a>
+          <div class="mega-dropdown">
+            <div class="mega-band">
+              <div class="mega-band-info">
+                <span class="mega-band-label">Browse</span>
+                <h3 class="mega-band-title">Anatomy Models</h3>
+                <p class="mega-band-meta">214 products · 6 brands</p>
+                <a href="${base}discovery/plp.html" class="mega-band-cta">View all Anatomy Models →</a>
+              </div>
+              <div class="mega-band-image" style="background:linear-gradient(135deg,var(--teal-200) 0%,var(--teal-500) 60%,var(--teal-700) 100%);"></div>
+            </div>
+            <div class="mega-links">
+              <a href="${base}discovery/plp.html" class="mega-link">Human Anatomy</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Skeleton Models</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Heart &amp; Organ Models</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Microanatomy &amp; Cells</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Pregnancy &amp; Childbirth</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Spine &amp; Neurology</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Muscular System</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Joints &amp; Orthopaedics</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Head &amp; ENT Models</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Digestive System</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Skin &amp; Sensory Models</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Synthetic Cadaver Models</a>
+            </div>
           </div>
         </li>
-        <li class="nav-item">
+
+        <li class="nav-item nav-item-mega">
           <a href="${base}discovery/plp.html" class="nav-link">Health Education <span class="nav-arrow">▾</span></a>
-          <div class="nav-dropdown">
-            <a href="${base}discovery/plp.html" class="dropdown-link">Drug, Alcohol &amp; Smoking</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Sex Education</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Childbirth &amp; Development</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Men's Health</a>
-            <a href="${base}discovery/plp.html" class="dropdown-link">Procedure Training</a>
+          <div class="mega-dropdown">
+            <div class="mega-band">
+              <div class="mega-band-info">
+                <span class="mega-band-label">Browse</span>
+                <h3 class="mega-band-title">Health Education</h3>
+                <p class="mega-band-meta">96 products · 5 brands</p>
+                <a href="${base}discovery/plp.html" class="mega-band-cta">View all Health Education →</a>
+              </div>
+              <div class="mega-band-image" style="background:linear-gradient(135deg,var(--teal-100) 0%,var(--teal-400) 60%,var(--teal-600) 100%);"></div>
+            </div>
+            <div class="mega-links">
+              <a href="${base}discovery/plp.html" class="mega-link">Drug, Alcohol &amp; Smoking</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Sex Education</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Childbirth &amp; Development</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Men's Health</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Women's Health</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Nutrition &amp; Obesity</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Dental Health</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Eye &amp; Vision Care</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Mental Health</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Sun Safety</a>
+              <a href="${base}discovery/plp.html" class="mega-link">First Aid</a>
+              <a href="${base}discovery/plp.html" class="mega-link">Procedure Training</a>
+            </div>
           </div>
         </li>
+
         <li class="nav-item">
           <a href="${base}discovery/brands.html" class="nav-link">Brands <span class="nav-arrow">▾</span></a>
           <div class="nav-dropdown">
@@ -102,9 +158,11 @@ function buildHeader(base) {
             <a href="${base}discovery/brands.html" class="dropdown-link">All Brands →</a>
           </div>
         </li>
+
         <li class="nav-item">
           <a href="${base}discovery/plp.html" class="nav-link">Demo Dose</a>
         </li>
+
       </ul>
     </div>
   </nav>
