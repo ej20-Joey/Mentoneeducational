@@ -19,6 +19,7 @@ mentone/
 │   │   ├── account-orders.html
 │   │   └── account-order-detail.html
 │   ├── discovery/
+│   │   ├── clp.html          # Category landing page (sits between nav and PLP)
 │   │   ├── plp.html          # Product listing page
 │   │   ├── pdp.html          # Product detail page
 │   │   ├── brands.html       # All brands listing
@@ -77,8 +78,10 @@ Every page renders its header and footer via JavaScript injection into `<div id=
 
 ### Path resolution
 
-Pages at the site root (`index.html`, `interstitial.html`) reference `shared.js` as `../js/shared.js`.
-Pages in subdirectories reference it as `../../js/shared.js`.
+Pages at the site root (`index.html`, `interstitial.html`) reference assets and scripts with no prefix — e.g. `css/tokens.css`, `js/shared.js`.
+Pages in subdirectories (`discovery/`, `account/`, etc.) use one level up — e.g. `../css/tokens.css`, `../js/shared.js`.
+
+> **Never use `../../`** — all pages sit at most one level deep from the site root (`Website/Website/`).
 
 `shared.js` itself calls `getBasePath()` at render time to prefix all navigation `href` values:
 
@@ -93,7 +96,52 @@ function getBasePath() {
 
 ### Adding a new subdirectory
 
-If a new folder is added (e.g. `blog/`), add it to the regex in `getBasePath()` and include `../../js/shared.js` in those pages.
+If a new folder is added (e.g. `blog/`), add it to the regex in `getBasePath()` and reference scripts/styles with `../` in those pages.
+
+---
+
+## Mega Dropdown Navigation
+
+Simulation, Anatomy Models, and Health Education use a full-width mega dropdown. Brands uses the compact `.nav-dropdown`.
+
+**How it works:**
+- `.nav-item-mega` has `position: static` so the dropdown positions relative to `.primary-nav` (which has `position: relative`), spanning the full nav width.
+- `.mega-dropdown` is `position: absolute; left: 0; right: 0; top: 100%`.
+- Content inside is wrapped in `.container` to align with page content width.
+
+**Structure per mega item:**
+```
+.mega-dropdown
+  .mega-band                  ← full-width white strip with category title
+    .container
+      .mega-band-inner        ← title + border-bottom constrained to container
+  .container
+    .mega-links               ← 3-column grid of sub-category links
+```
+
+**Rules:**
+- The category title heading in `.mega-band-inner` is the only element in the band — no product counts, no CTAs, no coloured backgrounds.
+- The divider line (`border-bottom: 2px solid var(--color-border)`) sits on `.mega-band-inner`, not `.mega-band`, so it is constrained to container width.
+- Mega dropdowns are hidden on mobile (`display: none !important` at ≤768px).
+- All mega dropdown CSS lives in `css/layout.css` under the `/* Mega Dropdown */` comment block.
+- All mega dropdown HTML lives in `js/shared.js` inside `buildHeader()`.
+
+---
+
+## Category Landing Page (`discovery/clp.html`)
+
+The CLP sits between the top navigation and the PLP in the discovery funnel:
+**Nav → CLP → PLP → PDP**
+
+Currently built for the **Simulation** category. Sections:
+1. **Hero** — full-width teal gradient with category name and description
+2. **Breadcrumb** — Home › Simulation
+3. **Sub-category tiles** — 6 tiles in a 3-col grid, each linking to `plp.html`
+4. **Brands strip** — 5 brand tiles linking to `brand-landing.html`
+5. **Featured products** — 4 product cards using `.product-card` classes
+6. **Promo banner** — "Talk to a Specialist" CTA linking to contact/about
+
+To create CLPs for Anatomy Models and Health Education, duplicate `clp.html` and swap the content. All styles are in a `<style>` block within `clp.html` itself (no separate CSS file needed).
 
 ---
 
@@ -298,20 +346,28 @@ Every product card is fully clickable to its PDP without nested `<a>` tags. Impl
 
 ## Next Steps
 
-The following work is identified but not yet started. Pick up from here in the next session.
+Pick up from here in the next session.
 
 ### High priority
-1. **Hero image placeholder** — The `.hero-image` right column still shows a `🫀` emoji inside `.hero-image-placeholder`. Replace with a real product image (or remove the column to make the hero full-width text + background image only).
-2. **PDP (`pdp.html`) review** — The product detail page has not been touched this project. Needs a full pass: image gallery, pricing, Add to Cart / Enquire CTA, badges, breadcrumb placement, and consistency with card patterns.
-3. **search.html and brand-landing.html badges** — These pages have no badges on their product cards. If badge distribution is needed for consistency, add them now before there are too many cards.
+1. **CLP for Anatomy Models and Health Education** — `clp.html` is built for Simulation only. Duplicate and update content for the other two nav categories so all three mega dropdown "View all" links have a destination.
+2. **PDP (`pdp.html`) review** — The product detail page has not been touched. Needs a full pass: image gallery, pricing, Add to Cart / Enquire CTA, badges, breadcrumb, and consistency with card patterns.
+3. **Hero image placeholder** — The `.hero-image` right column on `index.html` still shows a `🫀` emoji. Replace with a real product image or remove the column.
 
 ### Medium priority
-4. **Parallax tuning** — Current multiplier is `0.4` in `main.js`. Test at different viewport sizes and adjust if the effect looks too subtle or too strong.
-5. **Cart page (`cart.html`)** — Quantity inputs are read-only with `+`/`−` buttons, but the cart total, line totals, and remove functionality are all static. These will need wiring when a real cart state is introduced.
-6. **Checkout flow** — `checkout-details.html` and `checkout-payment.html` are design mockups. Form validation and payment UI have not been reviewed.
-7. **Account pages** — `account-dashboard.html`, `account-orders.html`, `account-order-detail.html` are untouched. Review for consistency with the design system.
+4. **Product images on remaining pages** — `brand-landing.html` and `search.html` still use `No_Image_Available.jpg`. Distribute product images the same way as `plp.html` and `index.html`.
+5. **Cart page (`cart.html`)** — Cart total, line totals, and remove functionality are static. Wire up when real cart state is introduced.
+6. **Checkout flow** — `checkout-details.html` and `checkout-payment.html` are design mockups. Form validation and payment UI not yet reviewed.
+7. **Account pages** — `account-dashboard.html`, `account-orders.html`, `account-order-detail.html` are untouched. Review for design system consistency.
 
 ### Low priority / polish
-8. **`badge-info` "Coming Soon"** — No product currently uses this badge on any page. Either remove the style or add it to a genuinely pre-release product.
-9. **Mobile review** — The parallax JS has no mobile breakpoint guard. On small screens the hero image may not need parallax. Consider disabling at `max-width: 768px`.
-10. **Component library sync** — `Components/` is a separate design system folder with its own `tokens.css`. Any token changes made to the main `css/tokens.css` should be reviewed against the component library to keep them in sync.
+8. **Mobile nav review** — Mega dropdowns are hidden on mobile. The standard mobile nav (hamburger) still shows the old flat link list. Consider adding sub-category accordion support for mobile.
+9. **Parallax tuning** — Current multiplier is `0.4` in `main.js`. The parallax JS has no mobile breakpoint guard — consider disabling at ≤768px.
+10. **Component library sync** — `Components/` has its own `tokens.css`. Any token changes to the main `css/tokens.css` should be reviewed against the component library.
+
+---
+
+## Session Log
+
+| Date | Summary |
+|---|---|
+| 16 Jun 2026 | Fixed all CSS/JS path references sitewide; distributed product images across `plp.html` and `index.html`; product card styling (white image bg, 1px divider, 1.5px border); fixed logo path and nav active-state bug in `shared.js`; built `clp.html` (Simulation CLP); built mega dropdown nav for Simulation, Anatomy Models, Health Education. |
