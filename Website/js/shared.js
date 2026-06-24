@@ -159,6 +159,10 @@ function buildHeader(base) {
           </div>
         </li>
 
+        <li class="nav-item">
+          <a href="${base}info/qanda.html" class="nav-link">Q&amp;A</a>
+        </li>
+
 
       </ul>
     </div>

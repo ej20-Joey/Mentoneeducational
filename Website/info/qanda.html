@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Questions &amp; Answers — Mentone Educational</title><link rel="stylesheet" href="../css/tokens.css"><link rel="stylesheet" href="../css/global.css"><link rel="stylesheet" href="../css/layout.css"><link rel="stylesheet" href="../css/components.css">
+<style>
+  .faq-item { border-bottom: 1px solid var(--color-border); }
+  .faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: var(--space-5) 0; font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); color: var(--color-text); cursor: pointer; gap: var(--space-4); }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: var(--font-size-xl); color: var(--color-primary); flex-shrink: 0; line-height: 1; transition: transform var(--transition-fast); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item .faq-body { padding-bottom: var(--space-5); color: var(--color-text-muted); line-height: var(--line-height-relaxed); }
+  .faq-group-title { font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary); margin-bottom: var(--space-2); margin-top: var(--space-10); padding-bottom: var(--space-3); border-bottom: 2px solid var(--color-primary); }
+  .faq-group-title:first-of-type { margin-top: 0; }
+</style>
+</head>
+<body><div id="site-header"></div>
+<main>
+  <div style="background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light));color:white;padding:var(--space-20) 0;text-align:center;">
+    <div class="container">
+      <h1 style="font-size:var(--font-size-4xl);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);">Questions &amp; Answers</h1>
+      <p style="font-size:var(--font-size-lg);opacity:0.85;max-width:560px;margin:0 auto;">Everything you need to know about ordering, shipping, products, and more.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:var(--space-16) 0;max-width:var(--container-narrow);">
+
+    <p class="faq-group-title">Ordering &amp; Accounts</p>
+
+    <details class="faq-item">
+      <summary>Do I need an account to place an order?</summary>
+      <div class="faq-body">No — you can check out as a guest. Creating an account lets you track orders, view your order history, and save your details for a faster checkout next time.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I order over the phone?</summary>
+      <div class="faq-body">Yes. Call us on <a href="tel:0395476638" style="color:var(--color-primary);">(03) 9547 6638</a> during business hours (Mon–Fri 9am–5pm AEST) and our team will process your order directly.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you offer purchase orders for institutions?</summary>
+      <div class="faq-body">Yes. Schools, universities, hospitals and government departments can place orders by purchase order. Please email <a href="mailto:sales@mentone-educational.com.au" style="color:var(--color-primary);">sales@mentone-educational.com.au</a> with your PO and billing details.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Are your prices inclusive of GST?</summary>
+      <div class="faq-body">All prices displayed on the website are inclusive of GST. Your tax invoice, issued at the time of purchase, will show the GST component separately.</div>
+    </details>
+
+    <p class="faq-group-title">Shipping &amp; Delivery</p>
+
+    <details class="faq-item">
+      <summary>How much does shipping cost?</summary>
+      <div class="faq-body">Standard shipping is free on all orders over $150 (Australia only). For orders under $150, a flat rate applies at checkout. Express shipping is available for an additional charge.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How long will my order take to arrive?</summary>
+      <div class="faq-body">Standard delivery takes 2–5 business days. Express delivery takes 1–2 business days. Orders placed before 12pm AEST on business days are typically dispatched the same day.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you ship internationally?</summary>
+      <div class="faq-body">Yes, we ship to New Zealand and select international destinations. Please contact us for a shipping quote before placing your order, as international freight costs vary by location and order size.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I track my order?</summary>
+      <div class="faq-body">Yes. Once your order is dispatched, you'll receive a tracking number by email. You can also view tracking details in your account under Order History.</div>
+    </details>
+
+    <p class="faq-group-title">Products &amp; Stock</p>
+
+    <details class="faq-item">
+      <summary>Are all products shown on the website in stock?</summary>
+      <div class="faq-body">We aim to keep stock levels accurate, but availability can change. If a product is out of stock or on back-order, we will contact you promptly to discuss alternatives or estimated lead times.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I request a product that isn't listed on your website?</summary>
+      <div class="faq-body">Absolutely. We import from suppliers across more than 10 countries and can often source products not listed online. Contact our team with the product details and we'll do our best to help.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you offer product demonstrations?</summary>
+      <div class="faq-body">Yes, for larger simulation products we can arrange demonstrations at our Melbourne showroom or at your institution. Please contact us to organise a suitable time.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Are your products suitable for healthcare professionals?</summary>
+      <div class="faq-body">Yes. We supply hospitals, universities, medical clinics, nursing schools and all healthcare professionals. Some products are gated to verified healthcare or education purchasers — you'll be prompted to confirm your professional status at checkout where applicable.</div>
+    </details>
+
+    <p class="faq-group-title">Returns &amp; Refunds</p>
+
+    <details class="faq-item">
+      <summary>What is your returns policy?</summary>
+      <div class="faq-body">We accept returns within 30 days of purchase for items in original, unused condition. Please <a href="contact.html" style="color:var(--color-primary);">contact us</a> before returning any item. Return shipping costs are the customer's responsibility unless the item is faulty or incorrectly sent.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What if my item arrives damaged or faulty?</summary>
+      <div class="faq-body">Please contact us within 7 days of receiving a damaged or faulty item. Send photos of the damage to <a href="mailto:sales@mentone-educational.com.au" style="color:var(--color-primary);">sales@mentone-educational.com.au</a> and we'll arrange a replacement or full refund at no cost to you.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I cancel my order?</summary>
+      <div class="faq-body">Orders can be cancelled before dispatch. Once an order has been dispatched, our standard returns policy applies. Special orders and custom items cannot be cancelled once placed.</div>
+    </details>
+
+    <div style="margin-top:var(--space-16);padding:var(--space-8);background:var(--color-bg-subtle);border-radius:var(--radius-lg);text-align:center;">
+      <p style="font-size:var(--font-size-lg);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-2);">Still have a question?</p>
+      <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);">Our team is happy to help — get in touch and we'll get back to you quickly.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </div>
+
+  </div>
+</main>
+<div id="site-footer"></div><script src="../js/shared.js"></script><script src="../js/main.js"></script></body></html>
